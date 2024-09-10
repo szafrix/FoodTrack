@@ -28,6 +28,26 @@ def postprocess_product_data(product_data: Dict[str, Any]) -> Product:
     def _get_field(dictionary: Dict[str, Any], key: str) -> Any:
         return dictionary.get(key, None)
 
+    def _convert_quantity_to_grams(quantity: str) -> float:
+        if quantity.lower().endswith("kg") or (
+            quantity.lower().endswith("l") and not quantity.lower().endswith("ml")
+        ):
+            quantity_g = float(quantity[:-2].strip()) * 1000
+        elif quantity.endswith("g") or quantity.endswith("ml"):
+            quantity_g = float(quantity[:-2].strip())
+        else:
+            quantity_g = 0
+            print(f"Unknown quantity unit: {quantity}")
+        return quantity_g
+
+    def _get_quantity(product_data: Dict[str, Any]) -> float:
+        quantity = _get_field(product_data["product"], "quantity")
+        return _convert_quantity_to_grams(quantity)
+
+    def _get_tags(product_data: Dict[str, Any]) -> str:
+        tags = _get_field(product_data["product"], "categories_tags")
+        return ", ".join([tag.split(":")[-1] for tag in tags])
+
     def _unpack_nutriments_data(product_data: Dict[str, Any]) -> Dict[str, Any]:
         valuable_keys = [
             "energy-kcal_100g",
@@ -49,26 +69,16 @@ def postprocess_product_data(product_data: Dict[str, Any]) -> Product:
             return nutriments_data
 
         for key in valuable_keys:
-            nutriments_data[key] = _get_field(nutriments_raw_data, key)
+            if value := _get_field(nutriments_raw_data, key):
+                nutriments_data[key.replace("-", "_")] = value
         return nutriments_data
 
-    def convert_quantity_to_grams(quantity: str) -> float:
-        if quantity.endswith(" kg"):
-            quantity_g = float(quantity[:-3]) * 1000
-        elif quantity.endswith(" g"):
-            quantity_g = float(quantity[:-2])
-        else:
-            quantity_g = 0
-            print(f"Unknown quantity unit: {quantity}")
-        return quantity_g
-
     postprocessed_data = {}
-    postprocessed_data["name"] = _get_field(product_data["product"], "product_name_en")
+    postprocessed_data["name"] = _get_field(product_data["product"], "product_name")
     postprocessed_data["brand"] = _get_field(product_data["product"], "brands")
     postprocessed_data["ean_code"] = _get_field(product_data, "code")
-    quantity = _get_field(product_data["product"], "quantity")
-    postprocessed_data["quantity_g"] = convert_quantity_to_grams(quantity)
-    postprocessed_data["tags"] = _get_field(product_data["product"], "categories_tags")
+    postprocessed_data["quantity_g"] = _get_quantity(product_data)
+    postprocessed_data["tags"] = _get_tags(product_data)
     postprocessed_data.update(_unpack_nutriments_data(product_data))
     return Product.from_dict(postprocessed_data)
 
