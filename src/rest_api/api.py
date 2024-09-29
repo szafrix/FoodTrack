@@ -3,10 +3,10 @@ from typing import Self
 from flask import Flask, jsonify, request
 from pydantic import BaseModel, Field
 
-from src.core.controllers.register_product import (
-    RegisterProductController,
-    RegisterProductControllerInput,
-    RegisterProductControllerOutput,
+from src.core.interactors.register_product import (
+    RegisterProductInteractor,
+    RegisterProductInteractorInput,
+    RegisterProductInteractorOutput,
 )
 from dependency_injector.wiring import inject, Provide
 from di.container import Container
@@ -37,8 +37,8 @@ class RegisterProductImageInputResponse(BaseModel):
 
 @inject
 def create_app(
-    register_product_controller: RegisterProductController = Provide(
-        Container.register_product_controller
+    register_product_Interactor: RegisterProductInteractor = Provide(
+        Container.register_product_Interactor
     ),
 ):
     app = Flask(__name__)
@@ -46,7 +46,7 @@ def create_app(
     @app.route("/register_product_manual_input/try_to_fetch", methods=["POST"])
     def register_product_manual_input_try_to_fetch():
         input_ = RegisterProductManualInputRequest(**request.json)
-        register_product_input = RegisterProductControllerInput(
+        register_product_input = RegisterProductInteractorInput(
             name=input_.name,
             kcal_100g=input_.kcal_100g,
             proteins_100g=input_.proteins_100g,
@@ -55,7 +55,7 @@ def create_app(
             try_to_fetch_product=True,
             nutrients_image=None,
         )
-        register_product_output = register_product_controller.execute(
+        register_product_output = register_product_Interactor.execute(
             register_product_input
         )
         return RegisterProductManualInputResponse(
@@ -66,12 +66,12 @@ def create_app(
     @app.route("/register_product_image_input/try_to_fetch", methods=["POST"])
     def register_product_image_input_try_to_fetch():
         input_ = RegisterProductImageInputRequest(**request.json)
-        register_product_input = RegisterProductControllerInput(
+        register_product_input = RegisterProductInteractorInput(
             name=input_.name,
             nutrients_image=input_.nutrients_image,
             try_to_fetch_product=True,
         )
-        register_product_output = register_product_controller.execute(
+        register_product_output = register_product_Interactor.execute(
             register_product_input
         )
         return RegisterProductImageInputResponse(
@@ -83,7 +83,7 @@ def create_app(
     def register_product_manual_input_do_not_fetch():
 
         input_ = RegisterProductManualInputRequest(**request.json)
-        register_product_input = RegisterProductControllerInput(
+        register_product_input = RegisterProductInteractorInput(
             name=input_.name,
             kcal_100g=input_.kcal_100g,
             proteins_100g=input_.proteins_100g,
@@ -91,7 +91,7 @@ def create_app(
             fats_100g=input_.fats_100g,
             try_to_fetch_product=False,
         )
-        register_product_output = register_product_controller.execute(
+        register_product_output = register_product_Interactor.execute(
             register_product_input
         )
         return RegisterProductManualInputResponse(
@@ -102,12 +102,12 @@ def create_app(
     @app.route("/register_product_image_input/do_not_fetch", methods=["POST"])
     def register_product_image_input_do_not_fetch():
         input_ = RegisterProductImageInputRequest(**request.json)
-        register_product_input = RegisterProductControllerInput(
+        register_product_input = RegisterProductInteractorInput(
             name=input_.name,
             nutrients_image=input_.nutrients_image,
             try_to_fetch_product=False,
         )
-        register_product_output = register_product_controller.execute(
+        register_product_output = register_product_Interactor.execute(
             register_product_input
         )
         return RegisterProductImageInputResponse(

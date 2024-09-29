@@ -17,7 +17,7 @@ from src.core.use_cases.fetch_product_from_repository import (
 from pydantic import BaseModel, model_validator, computed_field
 
 
-class RegisterProductControllerInput(BaseModel):
+class RegisterProductInteractorInput(BaseModel):
     name: str
     kcal_100g: float | None = None
     proteins_100g: float | None = None
@@ -48,13 +48,13 @@ class RegisterProductControllerInput(BaseModel):
         return self
 
 
-class RegisterProductControllerOutput(BaseModel):
+class RegisterProductInteractorOutput(BaseModel):
     success: bool
     error: str | None
     is_fetched_from_repository: bool
 
 
-class RegisterProductController:
+class RegisterProductInteractor:
     def __init__(
         self,
         register_product_use_case: RegisterProductInRepositoryUseCase,
@@ -66,8 +66,8 @@ class RegisterProductController:
         self.image_recognition_service = image_recognition_service
 
     def execute(
-        self, input_: RegisterProductControllerInput
-    ) -> RegisterProductControllerOutput:
+        self, input_: RegisterProductInteractorInput
+    ) -> RegisterProductInteractorOutput:
         if input_.try_to_fetch_product:
             fetch_product_input = GetProductFromRepositoryUseCaseInput(
                 product_name=input_.name
@@ -76,7 +76,7 @@ class RegisterProductController:
                 fetch_product_input
             )
             if fetch_product_output.success:
-                return RegisterProductControllerOutput(
+                return RegisterProductInteractorOutput(
                     success=True,
                     is_fetched_from_repository=True,
                     error=None,
@@ -111,7 +111,7 @@ class RegisterProductController:
             if image_recognition_output.success:
                 return self.register_product_use_case.execute(use_case_input)
             else:
-                return RegisterProductControllerOutput(
+                return RegisterProductInteractorOutput(
                     success=False,
                     is_fetched_from_repository=False,
                     error=image_recognition_output.error,

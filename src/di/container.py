@@ -7,7 +7,7 @@ from src.core.services.image_recognition import ImageRecognitionService
 from src.core.repositories.product_repository import ProductRepository
 from impl.services.dummy_image_recognition import DummyImageRecognitionService
 from src.impl.repositories.dummy_product_repository import DummyProductRepository
-from src.core.controllers.register_product import RegisterProductController
+from src.core.interactors.register_product import RegisterProductInteractor
 from src.core.use_cases.register_product_in_repository import (
     RegisterProductInRepositoryUseCase,
 )
@@ -57,8 +57,8 @@ class Container(containers.DeclarativeContainer):
         product_repository=product_repository_service,
     )
 
-    register_product_controller = providers.Factory(
-        RegisterProductController,
+    register_product_Interactor = providers.Factory(
+        RegisterProductInteractor,
         register_product_use_case=register_product_use_case,
         get_product_use_case=get_product_use_case,
         image_recognition_service=image_recognition_service,
