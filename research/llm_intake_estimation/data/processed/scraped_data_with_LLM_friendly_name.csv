@@ -1,0 +1,82 @@
+name,brand,ean_code,energy_kcal_100g,carbohydrates_100g,fat_100g,proteins_100g,fiber_100g,sugars_100g,salt_100g,saturated_fat_100g,sodium_100g,category,LLM friendly name
+Jabłko,,2000000151184,52,14,0.2,0.3,2.4,10,,,,Raw Ingredients,Apple
+Broccoli,,8033803726749,34,7,0.4,2.8,2.6,1.7,,,,Raw Ingredients,Broccoli
+Spinach,ASDA,5054781512257,22,0.8,0.8,2.2,2.1,0.8,0.31,0.1,0.124,Raw Ingredients,Spinach
+Cucumber,Nature's Pick,4088600352725,15,3.63,0.11,0.65,0.5,1.67,,0.034,,Raw Ingredients,Cucumber
+Ail Violet,Les producteurs partenaires,3770013085024,111,18.6,0.49,5.31,5.8,1.2,0.0225,0.009,0.009,Raw Ingredients,Violet Garlic
+Pommes de terre,Carrefour discount,3276559054390,2,0.5,2.1,1.5,,,,,,Raw Ingredients,Potato
+Whole almonds,"The Foodie Market, Aldi",4088600441689,595,9.1,49.9,21.2,12.5,4.4,0.01,3.84,0.004,Raw Ingredients,Whole almonds
+Sonnenblumenkerne (Bio),"Bio Primo, Maryland Trockenfrucht Vertriebs",2200280444206,599,7,52,21,,2.5,0.03,5.6,0.012,Raw Ingredients,Organic sunflower seeds
+Easy cook brown rice,worldwide foods,4088600511467,169,35.3,1.3,3.2,1.5,0.3,,0.2,,Raw Ingredients,Easy cook brown rice
+Puy Lentils & French green lentils,Merchant Gourmet,5018095011271,138,18,1.7,8.9,7.4,1,0.01,0.3,0.004,Raw Ingredients,Puy Lentils & French green lentils
+Red Kidney Beans,Freshona,20166090,117,15,1,8.4,7,2,0.5,0.1,0.2,Raw Ingredients,Red Kidney Beans (canned)
+Whole milk,Tesco,5000436589341,33,2.35,1.85,1.75,,2.35,0.055,1.2,0.022,Minimally Processed Foods,Whole milk
+Extra Light Skim Milk,Devondale,9300639400013,33.7,4.92,0.12,3.2,,4.92,0.013,0.12,0.0052,Minimally Processed Foods,Extra Light Skim Milk
+5% Greek Yogurt,Fage,5201054017432,93,3,5,9,,3,0.1,3.6,0.04,Minimally Processed Foods,5% Greek Yogurt
+Mozarella 125g,Leader Price,3263859406820,228,0.8,12,18,,0.8,0.4,12,0.16,Minimally Processed Foods,Mozarella
+cottage cheese,Hacendado,8480000609632,99,1.7,4,14,,1.7,0.82,2.6,0.328,Minimally Processed Foods,Cottage cheese
+Spreadable Slightly Salted,Lurpak,5740900404465,679,0.6,75,0.5,,0.6,0.885,35,0.354,Minimally Processed Foods,Spreadable Slightly Salted (Lurpak)
+6 œufs frais BIO,Ovalis,20057251,140,0.5,9.8,13,,0.5,0.31,2.6,0.124,Minimally Processed Foods,Fresh organic eggs
+Blanc de Poulet Nature Sans Nitrite,"Fleury Michon,",3302740059186,100,0.5,1.6,21,,0.5,1.5,0.4,0.6,Minimally Processed Foods,Natural Chicken Breast
+Pechuga de pavo,"Realvalle,Lidl",4056489320180,99,1.3,3.3,16,,0.5,1.8,1.1,0.72,Minimally Processed Foods,Turkey Breast
+Smoked Tofu,The Tofoo Co.,5034467000223,146,1.9,7.7,16.9,0.8,0.1,,1.2,,Minimally Processed Foods,Smoked Tofu
+Tempeh,The Tofoo Company,5034467000872,208,1.8,10.9,21.3,6.1,0.5,0.01,2.9,0.004,Minimally Processed Foods,Tempeh
+Seitan veggie,bjorg,3229820796642,132,10,1.7,18,2.2,0.8,0.72,0.3,0.288,Minimally Processed Foods,Seitan
+100% Whole Wheat Bread,Nature's Own,72250037129,231,46.2,1.92,11.5,7.69,3.85,1.16,,0.462,Basic Processed Foods,100% Whole Wheat Bread
+White Sourdough Bread,Jason’s,5025125000112,236.8,46.016,0.6976,9.728,3.002,2.099,0.8,0.1,0.32,Basic Processed Foods,White Sourdough Bread
+Tortilla Wraps with whole wheat,"Snack Day,Lidl",4056489506829,289,46.3,6,9.3,6.4,2.7,1,1.1,0.4,Basic Processed Foods,Tortilla Wraps with whole wheat
+Spaghetti N.5,"Barilla,Barilla Nr. 5, Barilla - Barilla G. e R. Fratelli - Società per Azioni - Via Mantova, 166, 43122 Parma - Italy",8076800195057,359,71,2,13,3,3.5,0.01,0.5,0.004,Basic Processed Foods,Spaghetti (Barilla)
+Pad Thai Rice Noodles,Thai Dragon,5020580019686,351,80,1.1,5.2,0.5,2.5,0.025,0.6,0.01,Basic Processed Foods,Pad Thai Rice Noodles
+gehackte Tomaten,Baresa,20004132,20,3,0.2,1.3,,3,0.04,0.1,0.016,Basic Processed Foods,Chopped tomatoes (canned)
+Baked beans,Freshona,20009847,83,12.4,0.6,4.1,,5,0.85,0.2,0.34,Basic Processed Foods,Baked beans (canned)
+Altramuces,Hacendado,8480000331366,105,9,1.7,12,3.8,,3.5,0.3,1.4,Basic Processed Foods,Lupines (jarred)
+Ananas en tranches au sirop léger,Freshona,20253929,56,13,0.5,0.5,1,13,0.01,,0.004,Basic Processed Foods,Sliced ​​pineapple in light syrup (canned)
+Épinards Branches à la Crème,Findus,3599741006329,68,5.8,3.1,3.5,1.6,1.9,0.6,2,0.24,Basic Processed Foods,Creamy Spinach Branches (frozen) (Findus)
+"Légumes et Céréales Cuisinés, Patates douces, Edamame, Butternut & Boulgour, crème fraîche et persil",Bonduelle,3083681105247,95,11.8,2.9,3.9,2.9,3.3,0.74,0.8,0.296,Basic Processed Foods,"Cooked Vegetables and Cereals, Sweet Potatoes, Edamame, Butternut and Bulgur, crème fraîche and parsley (frozen) (Bonduelle)"
+Peanut Butter,Mcennedy,20474478,658,13.1,56.1,22.8,5.9,4.7,0.6,7.6,0.24,Basic Processed Foods,Peanut Butter
+Bio Konfitüre Erdbeere,Maribel,20114671,242,59,0.1,0.3,,58,0.03,0.1,0.012,Basic Processed Foods,Organic Strawberry Jam
+Corn Flakes,Kellogg's,5059319014814,378,84,0.9,7,3,8,1.1,0.2,0.44,Moderately Processed Foods,Corn Flakes (Kellogg's)
+Protein-Packed Oatmeal,Kodiak,705599014147,380,62,5,24,6,20,0.85,1,0.34,Moderately Processed Foods,Protein-Packed Oatmeal (Kodiak)
+Salt Chips,Lay's,5941000025639,549,53,34,6.1,4.4,0.5,1.1,4.2,0.44,Moderately Processed Foods,Salt Chips (Lay's)
+Sticks et bretzels,Carrefour,3245414021068,384,76,3,11,3.8,2,3.6,0.4,1.44,Moderately Processed Foods,Sticks and pretzels (Carrefour)
+Tomato Ketchup,Heinz,8715700017006,102,23.2,0.1,1.2,,22.2,1.8,0.1,0.72,Moderately Processed Foods,Tomato Ketchup (Heinz)
+Real Mayonnaise,Hellmann's,8722700479475,729,3.57,78.6,3.57,,1.3,,6.43,,Moderately Processed Foods,Real Mayonnaise (Hellmann's)
+Bacon,"Justin Bridou,Belles Tranches",3449865302664,129,0.3,2.5,23,,0.2,2.7,1,1.08,Moderately Processed Foods,Bacon
+Chicken Flavour,"YumYum,Yum Yum",8852018101024,80,8.6,4.4,1.2,,0.3,0.7775,1.8,0.311,Moderately Processed Foods,Chicken Flavour Instant Soup (Yum Yum)
+Hummus de garbanzos receta clásica,Hacendado,8480000808585,311,11.1,25.8,6,8,0.1,0.855,3.3,0.342,Moderately Processed Foods,Hummus Classic (Hacendado)
+Mango congelado,Carrefour,3560070259564,64,14,0.5,0.7,1.8,13,0.01,0.1,0.004,Moderately Processed Foods,Frozen Mango (Carrefour)
+Vegan pizza Bruschetta,Vemondo,4056489451136,157,26.2,3.1,5,,4.1,0.78,0.6,0.312,Highly Processed Foods,Vegan pizza Bruschetta - Vemondo (ready meal)
+Chicken Nuggets 12er,"Toque du Chef, Chef Select",20621650,230,16.5,13,10.9,1.6,1.5,1.33,2.1,0.531,Highly Processed Foods,Chicken Nuggets 12er (Tque du Chef)
+bâtonnets de surimi,coraya l'original,3276170011185,112,10,4.2,8.2,,2.3,1.5,0.3,0.6,Highly Processed Foods,surimi sticks (coraya l'original)
+Ravioli 800g panza pur boeuf,Panzani,3038352880305,91,13,2.3,3.8,1.6,1.4,0.85,0.8,0.34,Highly Processed Foods,Ravioli 800g belly pur boeuf (Panzani) (canned)
+Doonuts,St Michel,3178530412697,453,54,25,5.7,1.1,31,0.33,4.5,0.132,Highly Processed Foods,Doonuts (St Michel)
+70% Cacao noir intense,Lindt,3046920022651,566,34,41,9.5,,30,0.1,24,0.04,Highly Processed Foods,Chocolate - 70% Intense black cocoa (Lindt)
+Ванилов сладолед с парчета бисквити с шоколадов чипс и шоколадови парчета,Ben & Jerry's,8711327373105,273,31,15,4.1,,25,0.17,9.2,0.068,Highly Processed Foods,Vanilla ice cream with chunks of chocolate chip cookies and chocolate chunks (Ben & Jerry's)
+,"Bedo Imex B.V., microwave",8714601010895,476,56,22,9,11,8,1.5,11,0.6,Highly Processed Foods,"Pop corn caramel salé (Bedo Imex B.V., microwave)"
+Hot Dog saucisses fumées,McEnnedy,20149710,227,1,19,13,,1,1.75,7.6,0.7,Highly Processed Foods,Hot Dog Sausages (McEnnedy) (jarred)
+Cheese Puffs,Snackrite,4088600272641,512,61,27,5.7,1,10,1.7,2.3,0.68,Highly Processed Foods,Cheese Puffs (Snackrite)
+Stew Type Spicy Chicken Flavor Ramen,Buldak,8801073113381,352,57.9,10.3,6.9,1.38,6.21,3.9,4.83,1.56,Highly Processed Foods,Stew Type Spicy Chicken Flavor Ramen (Buldak)
+Erbseneintopf,"Kania,Lidl",20030841,79,9.8,1.6,5,,0.2,1,0.5,0.4,Highly Processed Foods,Pea stew (instant) (Kania)
+Optimum Nutrition Gold Standard Whey,Optimum nutrition,5060469988566,377,5.67,4.33,80,,3.33,0.233,1.33,0.0933,Specialty Foods,Optimum Nutrition Gold Standard Whey
+Chocolate brownie protein bar,Lidl Stiftung & Co. KG,20035525,369,25.3,10.9,50,1.11,5.33,0.00261,6,0.00104,Specialty Foods,Chocolate brownie protein bar
+Beyond Burger,Beyond Meat,850004207390,196,5.6,12,16,1.2,0.6,0.7375,2.9,0.295,Specialty Foods,Beyond Burger (Beyond Meat)
+Vegane Bio Tomate Kräuter,"Mein Veggie Tag,Aldi,Tofu Life,InnFood",4061458069762,241,10.5,20,4.1,1.5,6.5,0.9,2.1,0.36,Specialty Foods,Vegan Organic Tomato Herbs Spread (Mein Veggie Tag)
+Tofu toscana,"Lidl,Vemondo",4056489332848,142,2.5,8.9,13,,0.5,0.9,1,0.36,Specialty Foods,Tofu (toscana marinata) (Vemondo)
+Dijon mustard,Bramwells,4088600249414,154,3.9,11,6.9,3.2,2.4,5,0.8,2,Specialty Foods,Dijon mustard
+Paleta de cebo iberica,Carrefour,8431876277630,300,0.5,21,27,,0.5,3.5,8.5,1.4,Specialty Foods,Iberian Cebo Shoulder
+Jackfruit young tender pieces,Biona Organic,5032722316140,86,19.5,0.2,1.5,,,0.84,,0.336,Specialty Foods,Jackfruit young tender pieces
+Apple Juice,"Solevita,Vitafit,Naturis",20569105,45,10.4,0.1,0.1,0.5,9.9,0.01,0.1,0.004,Beverages,Apple Juice (Solevita)
+Limonata,"San Pellegrino, Nestlé",8002270576829,22,4.5,0.1,0.1,0.3,4.5,,,,Beverages,Limonata (San Pellegrino)
+Unsweetened Coconut UHT,Koko,5060100601861,19,0.4,1.4,1.2,0.2,0.2,0.1,1.2,0.04,Beverages,Unsweetened Coconut UHT milk (Koko)
+BLT Sandwich,REWE to go,4388844252233,255,18.60000038,15.19999981,9.300000191,,2.900000095,1.3,2.599999905,0.52,Composite Dishes,BLT Sandwich (REWE to go)
+Pizza fresca pepperoni,Casa Tarradellas,8410762220585,296,27.6,14.2,14.4,,1.8,1.7,6.7,0.68,Composite Dishes,Pizza fresca pepperoni (Casa Tarradellas)
+Cream of Tomato Soup,Heinz,5000157062673,,7.2,2.3,0.9,0.6,5.1,0.6,0.2,0.24,Composite Dishes,Cream of Tomato Soup (Heinz)
+Boeuf bourguignon,Lidl,20289201,64,5.4,1.2,7,,1.3,1.1,0.5,0.44,Composite Dishes,Boeuf bourguignon (Lidl)
+Lasaña Fácil,El Pavo,8410173072025,360,73,1.4,12,3.9,1.5,,0.2,,Composite Dishes,Lasaña Fácil (El Pavo)
+Chili con carne,Hacendado,8480000231376,114,7.7,4.7,8.2,4,2.8,1,1.1,0.4,Composite Dishes,Chili con carne (Hacendado)
+Pad Thaï Crevettes,,3456700231355,147,23,3.7,6,1.4,4.7,1.76,0.4,0.704,Composite Dishes,Pad Thai with shrips (ready meal)
+Paëlla à la Valenciana,Picard,3270160697861,140,15,5.1,7.6,1.6,1.5,0.71,1.2,0.284,Composite Dishes,Paella Valenciana (Picard)
+Sheperds pie,Tesco Finest,5053947817724,126,12.6,4.85,7.24,1.2,2.01,0.463,2.2,0.185,Composite Dishes,Sheperds Pie (Tesco Finest)
+Chicken casserole,Newgate,20995157,305,61.9,1.9,7.5,,9,12.1,0.6,4.84,Composite Dishes,Chicken Casserole (Newgate)
+Old El Paso Cheesy Enchilada Kit,Old El Paso,8410076471222,182,31.8,2.89,5.66,3.25,5.54,1.13,0.361,0.451,Composite Dishes,Old El Paso Cheesy Enchilada Kit
+Texas Gumbo with Sausage & Chicken,George & Rubie's Favorites,19966991,101,10.1,4.41,6.17,,0.441,0.76,1.1,0.304,Composite Dishes,Texas Gumbo with Sausage & Chicken (George & Rubie's Favorites)
