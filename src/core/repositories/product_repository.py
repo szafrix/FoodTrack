@@ -1,21 +1,31 @@
 from abc import ABC, abstractmethod
-
-from typing import List, Optional, Union
-
 from src.core.entities.product import Product
-from src.core.entities.requests.fetch_product_requests import (
-    FetchProductByBarcodeRequest, FetchProductByNameRequest)
+from pydantic import BaseModel
+
+class GetProductFromRepositoryInput(BaseModel):
+    product_name: str
 
 
-class IProductRepository(ABC):
+class GetProductFromRepositoryOutput(BaseModel):
+    success: bool
+    product: Product | None
+    error: str | None
+
+
+class SaveProductToRepositoryInput(BaseModel):
+    product: Product
+
+
+class SaveProductToRepositoryOutput(BaseModel):
+    success: bool
+    error: str | None
+
+
+class ProductRepository(ABC):
     @abstractmethod
-    def register_product(self, product: Product) -> None:
+    def get_product(self, input_: GetProductFromRepositoryInput) -> GetProductFromRepositoryOutput:
         pass
 
     @abstractmethod
-    def fetch_product(
-        self, request: Union[FetchProductByBarcodeRequest, FetchProductByNameRequest]
-    ) -> Optional[Product]:
+    def save_product(self, input_: SaveProductToRepositoryInput) -> SaveProductToRepositoryOutput:
         pass
-
-
