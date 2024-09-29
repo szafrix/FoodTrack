@@ -57,7 +57,7 @@ class Container(containers.DeclarativeContainer):
         product_repository=product_repository_service,
     )
 
-    register_product_Interactor = providers.Factory(
+    register_product_interactor = providers.Factory(
         RegisterProductInteractor,
         register_product_use_case=register_product_use_case,
         get_product_use_case=get_product_use_case,

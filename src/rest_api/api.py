@@ -37,8 +37,8 @@ class RegisterProductImageInputResponse(BaseModel):
 
 @inject
 def create_app(
-    register_product_Interactor: RegisterProductInteractor = Provide(
-        Container.register_product_Interactor
+    register_product_interactor: RegisterProductInteractor = Provide(
+        Container.register_product_interactor
     ),
 ):
     app = Flask(__name__)
@@ -55,7 +55,7 @@ def create_app(
             try_to_fetch_product=True,
             nutrients_image=None,
         )
-        register_product_output = register_product_Interactor.execute(
+        register_product_output = register_product_interactor.execute(
             register_product_input
         )
         return RegisterProductManualInputResponse(
@@ -71,7 +71,7 @@ def create_app(
             nutrients_image=input_.nutrients_image,
             try_to_fetch_product=True,
         )
-        register_product_output = register_product_Interactor.execute(
+        register_product_output = register_product_interactor.execute(
             register_product_input
         )
         return RegisterProductImageInputResponse(
@@ -91,7 +91,7 @@ def create_app(
             fats_100g=input_.fats_100g,
             try_to_fetch_product=False,
         )
-        register_product_output = register_product_Interactor.execute(
+        register_product_output = register_product_interactor.execute(
             register_product_input
         )
         return RegisterProductManualInputResponse(
@@ -107,7 +107,7 @@ def create_app(
             nutrients_image=input_.nutrients_image,
             try_to_fetch_product=False,
         )
-        register_product_output = register_product_Interactor.execute(
+        register_product_output = register_product_interactor.execute(
             register_product_input
         )
         return RegisterProductImageInputResponse(
