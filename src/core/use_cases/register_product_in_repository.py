@@ -34,9 +34,7 @@ class RegisterProductInRepositoryUseCase:
                 product=repository_response.product,
             )
         except BaseError as exc:
-            logger.error(
-                f"Error while registering product in repository {exc}", exc_info=True
-            )
+            logger.error(exc, exc_info=True)
             raise exc
         except Exception as exc:
             logger.error(

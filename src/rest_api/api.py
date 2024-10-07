@@ -19,6 +19,7 @@ from rest_api.endpoints.autocomplete import (
     autocomplete_product,
     AutocompleteProductResponse,
 )
+from src.rest_api.middleware.error_handler import error_handler_middleware
 
 
 def create_app(origins: list[str]) -> FastAPI:
@@ -31,6 +32,7 @@ def create_app(origins: list[str]) -> FastAPI:
         allow_methods=["GET", "POST"],
         allow_headers=["*"],
     )
+    app.middleware("http")(error_handler_middleware)
 
     app.mount("/static", StaticFiles(directory="src/frontend"), name="static")
 

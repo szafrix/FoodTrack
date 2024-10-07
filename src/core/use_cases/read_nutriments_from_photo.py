@@ -43,9 +43,7 @@ class ReadNutrimentsFromPhotoUseCase:
             )
             return ReadNutrimentsFromPhotoUseCaseOutput(product=product)
         except BaseError as exc:
-            logger.error(
-                f"Error while reading nutriments from photo {exc}", exc_info=True
-            )
+            logger.error(exc, exc_info=True)
             raise exc
         except Exception as exc:
             logger.error(
