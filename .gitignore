@@ -163,3 +163,7 @@ cython_debug/
 
 # databases
 *.db
+
+training/
+.cursorignore
+data/

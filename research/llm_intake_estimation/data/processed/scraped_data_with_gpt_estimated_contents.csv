@@ -1,0 +1,1242 @@
+name,brand,ean_code,energy_kcal_100g,carbohydrates_100g,fat_100g,proteins_100g,fiber_100g,sugars_100g,salt_100g,saturated_fat_100g,sodium_100g,category,LLM friendly name,gpt_completion,gpt_energy_kcal_100g,gpt_proteins_100g,gpt_fat_100g,gpt_carbohydrates_100g
+Jabłko,,2000000151184,52.0,14.0,0.2,0.3,2.4,10.0,,,,Raw Ingredients,Apple,"<scratchpad>
+An apple is a fruit that is generally low in calories and fat, but contains carbohydrates, mostly in the form of natural sugars and fiber. Apples also have a small amount of protein.
+
+Typical nutritional values per 100 grams for an apple:
+- Calories: Approximately 52 kcal
+- Protein: Approximately 0.3 grams
+- Fat: Approximately 0.2 grams
+- Carbohydrates: Approximately 14 grams (includes sugars and fiber)
+</scratchpad>
+
+<calories>52</calories>
+<protein>0.3</protein>
+<fat>0.2</fat>
+<carbohydrates>14</carbohydrates>",52.0,0.3,0.2,14.0
+Broccoli,,8033803726749,34.0,7.0,0.4,2.8,2.6,1.7,,,,Raw Ingredients,Broccoli,"<scratchpad>
+Broccoli is a green vegetable rich in vitamins, minerals, and fiber. It is low in calories and contains a substantial amount of protein compared to other vegetables. Its fat content is minimal, making it a healthy choice for many diets. Broccoli is also known for its carbohydrate content, which primarily comes from dietary fiber and sugar.
+</scratchpad>
+
+<calories>34</calories>
+<protein>3</protein>
+<fat>0.4</fat>
+<carbohydrates>7</carbohydrates>",34.0,3.0,0.4,7.0
+Spinach,ASDA,5054781512257,22.0,0.8,0.8,2.2,2.1,0.8,0.31,0.1,0.124,Raw Ingredients,Spinach,"<scratchpad>
+Spinach is a leafy green vegetable known for its high nutrient content. It's low in calories and contains a good amount of vitamins, minerals, and dietary fiber. Spinach is also relatively high in protein for a vegetable but low in fat. Carbohydrates in spinach are mainly dietary fiber and some sugars.
+
+Typical nutritional values per 100 grams of spinach are approximately:
+- Calories: Around 23 kcal
+- Protein: Around 2.9 grams
+- Fat: Around 0.4 grams
+- Carbohydrates: Around 3.6 grams (including fiber)
+</scratchpad>
+
+<calories>23</calories>
+<protein>2.9</protein>
+<fat>0.4</fat>
+<carbohydrates>3.6</carbohydrates>",23.0,2.9,0.4,3.6
+Cucumber,Nature's Pick,4088600352725,15.0,3.63,0.11,0.65,0.5,1.67,,0.034,,Raw Ingredients,Cucumber,"<scratchpad>
+Cucumber is a low-calorie vegetable and consists mostly of water. It has minimal protein, fat, and carbohydrate content.
+
+Typical nutritional content per 100 grams for cucumber:
+- Calories: Very low, around 12-16 kcal
+- Protein: Low, around 0.6-0.8 grams
+- Fat: Very low, around 0.1-0.2 grams
+- Carbohydrates: Low, around 3-4 grams (mainly from dietary fiber and sugars)
+</scratchpad>
+
+<calories>15</calories>
+<protein>0.7</protein>
+<fat>0.1</fat>
+<carbohydrates>3.6</carbohydrates>",15.0,0.7,0.1,3.6
+Ail Violet,Les producteurs partenaires,3770013085024,111.0,18.6,0.49,5.31,5.8,1.2,0.0225,0.009,0.009,Raw Ingredients,Violet Garlic,"<scratchpad>
+Violet garlic is a type of garlic that is often characterized by its purple coloration. It is used both as a culinary ingredient and for its medicinal properties. Nutritionally, it is similar to regular garlic, meaning it has low calories, very little fat, decent amounts of protein, and a notable amount of carbohydrates, particularly in the form of sugars. Since violet garlic is essentially the same as common garlic in its nutritional profile, the estimates can be based on standard garlic values.
+
+Typical nutritional values per 100 grams of garlic:
+- Calories: Around 149 kcal
+- Protein: Around 6.36 grams
+- Fat: Around 0.5 grams
+- Carbohydrates: Around 33 grams
+
+Considering no significant deviation from common garlic.
+</scratchpad>
+
+<calories>149</calories>
+<protein>6.36</protein>
+<fat>0.5</fat>
+<carbohydrates>33</carbohydrates>",149.0,6.36,0.5,33.0
+Pommes de terre,Carrefour discount,3276559054390,2.0,0.5,2.1,1.5,,,,,,Raw Ingredients,Potato,"<scratchpad>
+Potato is a common root vegetable that is primarily made up of carbohydrates. It is relatively low in fat and protein. Potatoes are also a good source of vitamins and minerals, especially when eaten with their skins. On average, per 100 grams, a potato contains primarily carbohydrates with a smaller proportion of protein and very minimal fat.
+</scratchpad>
+
+<calories>77</calories>
+<protein>2</protein>
+<fat>0</fat>
+<carbohydrates>17</carbohydrates>",77.0,2.0,0.0,17.0
+Whole almonds,"The Foodie Market, Aldi",4088600441689,595.0,9.1,49.9,21.2,12.5,4.4,0.01,3.84,0.004,Raw Ingredients,Whole almonds,"<scratchpad>
+Whole almonds are nuts that are rich in healthy fats, protein, and fiber. They are also known for their dense nutritional profile.
+- Average calories in whole almonds per 100 grams: Approximately 575 calories
+- Average protein content: About 21 grams
+- Average fat content: Around 50 grams
+- Average carbohydrate content: Approximately 22 grams, with a significant portion being dietary fiber.
+</scratchpad>
+
+<calories>575</calories>
+<protein>21</protein>
+<fat>50</fat>
+<carbohydrates>22</carbohydrates>",575.0,21.0,50.0,22.0
+Sonnenblumenkerne (Bio),"Bio Primo, Maryland Trockenfrucht Vertriebs",2200280444206,599.0,7.0,52.0,21.0,,2.5,0.03,5.6,0.012,Raw Ingredients,Organic sunflower seeds,"<scratchpad>
+Organic sunflower seeds are known to be nutrient-dense and are typically high in protein, healthy fats, and carbohydrates. They are commonly used as a snack or added to dishes for extra texture and nutrients. Being seeds, they will have a higher fat content.
+
+Generally, sunflower seeds per 100 grams contain about:
+- Calories: High due to fats and proteins
+- Protein: Moderate to high since they are seeds
+- Fat: High, primarily unsaturated fats
+- Carbohydrates: Moderate, with some fiber content
+
+Approximate values from typical sunflower seeds can give us a good estimate.
+</scratchpad>
+
+<calories>584</calories>
+<protein>20</protein>
+<fat>51</fat>
+<carbohydrates>20</carbohydrates>",584.0,20.0,51.0,20.0
+Easy cook brown rice,worldwide foods,4088600511467,169.0,35.3,1.3,3.2,1.5,0.3,,0.2,,Raw Ingredients,Easy cook brown rice,"<scratchpad>
+Easy cook brown rice maintains most of the nutritional profile of regular brown rice but is partially pre-cooked to reduce cooking times. Brown rice is a whole grain with the bran and germ layers intact, giving it a nuttier flavor and chewier texture compared to white rice.
+
+Typical nutritional profile per 100 grams for brown rice is approximately:
+- Calories: around 110-120 kcal
+- Protein: around 2.5-3.5 grams
+- Fat: around 0.9-1.5 grams
+- Carbohydrates: around 22-26 grams
+</scratchpad>
+
+<calories>112</calories>
+<protein>2.6</protein>
+<fat>1.0</fat>
+<carbohydrates>23.0</carbohydrates>",112.0,2.6,1.0,23.0
+Puy Lentils & French green lentils,Merchant Gourmet,5018095011271,138.0,18.0,1.7,8.9,7.4,1.0,0.01,0.3,0.004,Raw Ingredients,Puy Lentils & French green lentils,"<scratchpad>
+Puy lentils, also known as French green lentils, are a type of legume. They are known for their lower calorie content and high protein, fiber, and mineral content compared to other legumes. Typically, 100 grams of these lentils will have a balanced nutritional profile that is commonly found in most legumes.
+
+Based on typical lentil data, a rough estimate for 100 grams of cooked Puy lentils might include the following data:
+- Calories: Usually around 110-120 calories.
+- Protein: Legumes like lentils often contain high levels of protein, around 9 grams.
+- Fat: Lentils are low in fats, approximately 0.4 grams.
+- Carbohydrates: Lentils are also high in carbohydrates, mainly in the form of complex carbs and fiber, around 20 grams.
+</scratchpad>
+
+<calories>116</calories>
+<protein>9</protein>
+<fat>0.4</fat>
+<carbohydrates>20</carbohydrates>",116.0,9.0,0.4,20.0
+Red Kidney Beans,Freshona,20166090,117.0,15.0,1.0,8.4,7.0,2.0,0.5,0.1,0.2,Raw Ingredients,Red Kidney Beans (canned),"<scratchpad>
+Red kidney beans are a legume known for their high protein and fiber content. Since these beans are canned, they may contain some added salt or preservatives but will still largely retain their nutritional profile. Canned beans are typically cooked and ready to eat, which slightly alters their macro-nutrient content compared to raw beans.
+
+Typical nutritional profile per 100 grams for canned red kidney beans:
+- Calories: These beans are rich in complex carbohydrates, with moderate protein and very little fat.
+- Protein: As legumes, they offer a good amount of plant-based protein.
+- Fat: They contain negligible fat.
+- Carbohydrates: They are high in carbohydrates, primarily from fiber and starch.
+
+Estimated nutrition per 100 grams:
+- Calories: approximately 110 kcal
+- Protein: around 8 grams
+- Fat: around 0.5 grams
+- Carbohydrates: around 20 grams
+</scratchpad>
+
+<calories>110</calories>
+<protein>8</protein>
+<fat>0.5</fat>
+<carbohydrates>20</carbohydrates>",110.0,8.0,0.5,20.0
+Whole milk,Tesco,5000436589341,33.0,2.35,1.85,1.75,,2.35,0.055,1.2,0.022,Minimally Processed Foods,Whole milk,"<scratchpad>
+Whole milk is a commonly consumed dairy product. It typically contains:
+- Calories: Milk contains a balanced mix of macronutrients contributing to its caloric content.
+- Protein: Milk is a good source of protein, including casein and whey.
+- Fat: Whole milk contains all the natural fat, generally around 3.25% to 3.5%.
+- Carbohydrates: The primary carbohydrate in milk is lactose.
+</scratchpad>
+
+<calories>61</calories>
+<protein>3.2</protein>
+<fat>3.3</fat>
+<carbohydrates>4.8</carbohydrates>",61.0,3.2,3.3,4.8
+Extra Light Skim Milk,Devondale,9300639400013,33.7,4.92,0.12,3.2,,4.92,0.013,0.12,0.0052,Minimally Processed Foods,Extra Light Skim Milk,"<scratchpad>
+Extra Light Skim Milk is a dairy product that usually contains very low levels of fat. Due to skimming, most of the fat is removed, resulting in lower calorie content compared to whole milk. Protein and carbohydrate levels should remain fairly similar to regular skim milk but still slightly lower, as this is ""extra light.""
+</scratchpad>
+
+<calories>30</calories>
+<protein>3</protein>
+<fat>0.1</fat>
+<carbohydrates>4.5</carbohydrates>",30.0,3.0,0.1,4.5
+5% Greek Yogurt,Fage,5201054017432,93.0,3.0,5.0,9.0,,3.0,0.1,3.6,0.04,Minimally Processed Foods,5% Greek Yogurt,"<scratchpad>
+5% Greek Yogurt is a type of yogurt that generally contains around 5% milk fat. Greek yogurt is known to be thicker and have a higher protein content compared to regular yogurt. 
+
+Typical nutritional values for a 5% Greek Yogurt per 100 grams might look like this:
+- Calories: Around 90-100 kcal (since fat contributes 9 kcal per gram and there are 5 grams of fat)
+- Protein: Greek yogurt is high in protein, typically around 10 grams.
+- Fat: 5 grams of fat due to the 5% fat content.
+- Carbohydrates: Carbohydrate content varies, but it’s generally around 4 grams.
+
+</scratchpad>
+
+<calories>97</calories>
+<protein>10</protein>
+<fat>5</fat>
+<carbohydrates>4</carbohydrates>",97.0,10.0,5.0,4.0
+Mozarella 125g,Leader Price,3263859406820,228.0,0.8,12.0,18.0,,0.8,0.4,12.0,0.16,Minimally Processed Foods,Mozarella,"<scratchpad>
+Mozarella is a type of cheese known for its use in Italian dishes like pizza and caprese salad. It's made from cow or buffalo milk and has a semi-soft texture. Given that it’s a cheese, it will have moderate-fat content, some protein, and low to moderate carbohydrates.
+
+Typical nutritional content for Mozarella cheese per 100 grams:
+- Calories: Cheese is energy-dense, so around 280-300 kcal per 100 grams.
+- Protein: As a dairy product, it tends to have a good amount of protein, likely around 22-25 grams.
+- Fat: Mozarella is medium-fat cheese, expected to have around 20-22 grams.
+- Carbohydrates: Cheese is generally low in carbs, around 2-3 grams.
+</scratchpad>
+
+<calories>280</calories>
+<protein>22</protein>
+<fat>20</fat>
+<carbohydrates>2</carbohydrates>",280.0,22.0,20.0,2.0
+cottage cheese,Hacendado,8480000609632,99.0,1.7,4.0,14.0,,1.7,0.82,2.6,0.328,Minimally Processed Foods,Cottage cheese,"<scratchpad>
+Cottage cheese is a dairy product known for its creamy texture and high protein content. It is often used in various dishes or consumed on its own. The content can vary slightly depending on whether it's low-fat or full-fat, but generally, it has:
+
+- Relatively low calories
+- High protein
+- Moderate fat (especially if full-fat)
+- Low carbohydrates
+
+For a standard cottage cheese:
+
+- Calories: approximately 98 kcal per 100 grams
+- Protein: around 11 grams per 100 grams
+- Fat: about 4.3 grams per 100 grams
+- Carbohydrates: roughly 3.4 grams per 100 grams
+</scratchpad>
+
+<calories>98</calories>
+<protein>11</protein>
+<fat>4.3</fat>
+<carbohydrates>3.4</carbohydrates>",98.0,11.0,4.3,3.4
+Spreadable Slightly Salted,Lurpak,5740900404465,679.0,0.6,75.0,0.5,,0.6,0.885,35.0,0.354,Minimally Processed Foods,Spreadable Slightly Salted (Lurpak),"<scratchpad>
+Lurpak Slightly Salted is a type of butter. Since it's slightly salted, the salt content is a bit higher than in unsalted butter but it doesn't affect the macronutrient profile significantly.
+Typically, butter is high in fat and contains small amounts of protein and carbohydrates.
+
+Estimates for butter per 100 grams:
+- Calories: Around 717 kcal
+- Protein: About 0.85 grams
+- Fat: Approximately 81 grams
+- Carbohydrates: Roughly 0.06 grams
+
+Given it is a spreadable variant, there might be slight differences but largely, these values should be a good approximation.
+</scratchpad>
+
+<calories>717</calories>
+<protein>0.85</protein>
+<fat>81</fat>
+<carbohydrates>0.06</carbohydrates>",717.0,0.85,81.0,0.06
+6 œufs frais BIO,Ovalis,20057251,140.0,0.5,9.8,13.0,,0.5,0.31,2.6,0.124,Minimally Processed Foods,Fresh organic eggs,"<scratchpad>
+Fresh organic eggs are a common food item known for their high nutritional value. They are commonly used in a variety of dishes and are rich in protein. Eggs also contain significant amounts of fat, especially in the yolk, while the carbohydrate content is relatively low. In general, eggs are nutrient-dense.
+
+Here is the typical nutritional content per 100 grams for eggs:
+
+- Calories: Eggs generally have around 150 calories per 100 grams.
+- Protein: Eggs are an excellent source of protein, typically offering about 13 grams.
+- Fat: The fat content in eggs is around 10 grams per 100 grams, largely due to the yolk.
+- Carbohydrates: Eggs have a very low carbohydrate content, usually less than 1 gram.
+
+Given that these are fresh organic eggs, the nutritional content should be very close to regular eggs with perhaps slight variations due to organic farming methods, but the difference would be minimal.
+</scratchpad>
+
+<calories>150</calories>
+<protein>13</protein>
+<fat>10</fat>
+<carbohydrates>1</carbohydrates>",150.0,13.0,10.0,1.0
+Blanc de Poulet Nature Sans Nitrite,"Fleury Michon,",3302740059186,100.0,0.5,1.6,21.0,,0.5,1.5,0.4,0.6,Minimally Processed Foods,Natural Chicken Breast,"<scratchpad>
+Natural Chicken Breast:
+- Generally low in fat, particularly if skinless
+- High in protein
+- Low in carbohydrates
+- Commonly used in healthy diets
+
+Estimated nutritional values (per 100 grams):
+- Calories: 165 kcal
+- Protein: 31 grams
+- Fat: 3.6 grams
+- Carbohydrates: 0 grams
+</scratchpad>
+
+<calories>165</calories>
+<protein>31</protein>
+<fat>3.6</fat>
+<carbohydrates>0</carbohydrates>",165.0,31.0,3.6,0.0
+Pechuga de pavo,"Realvalle,Lidl",4056489320180,99.0,1.3,3.3,16.0,,0.5,1.8,1.1,0.72,Minimally Processed Foods,Turkey Breast,"<scratchpad>
+Turkey breast is a lean meat known for its high protein content and relatively low fat content. It is often considered a healthy choice for those looking to consume lean protein. Turkey breast is also low in carbohydrates.
+</scratchpad>
+
+<calories>135</calories>
+<protein>30</protein>
+<fat>1</fat>
+<carbohydrates>0</carbohydrates>",135.0,30.0,1.0,0.0
+Smoked Tofu,The Tofoo Co.,5034467000223,146.0,1.9,7.7,16.9,0.8,0.1,,1.2,,Minimally Processed Foods,Smoked Tofu,"<scratchpad>
+Smoked Tofu is a plant-based protein product made from soybeans, water, and often additional seasoning and smoke flavoring. Tofu itself is high in protein, relatively low in fat, and has a moderate amount of carbohydrates. The smoking process might slightly alter its nutritional profile but not significantly. I will base my estimates on regular tofu nutritional values and account for any minor changes due to the smoking process.
+</scratchpad>
+
+<calories>140</calories>
+<protein>15</protein>
+<fat>8</fat>
+<carbohydrates>3</carbohydrates>",140.0,15.0,8.0,3.0
+Tempeh,The Tofoo Company,5034467000872,208.0,1.8,10.9,21.3,6.1,0.5,0.01,2.9,0.004,Minimally Processed Foods,Tempeh,"<scratchpad>
+Tempeh is a traditional Indonesian food made from fermented soybeans. It is known for its high protein content and is often used as a meat substitute in vegetarian and vegan diets. Typically, tempeh is rich in protein, moderate in fat, and low to moderate in carbohydrates, with a good amount of dietary fiber. Given its composition from soybeans, it would also contain various vitamins and minerals but, for this task, the focus remains on macronutrients.
+</scratchpad>
+
+<calories>193</calories>
+<protein>19</protein>
+<fat>11</fat>
+<carbohydrates>9</carbohydrates>",193.0,19.0,11.0,9.0
+Seitan veggie,bjorg,3229820796642,132.0,10.0,1.7,18.0,2.2,0.8,0.72,0.3,0.288,Minimally Processed Foods,Seitan,"<scratchpad>
+Seitan is a popular meat substitute made from gluten, the main protein in wheat. It has a high protein content and is generally low in fat and carbohydrates because it is made primarily from wheat gluten with water and sometimes other flavoring ingredients. 
+
+Typical nutritional content per 100 grams:
+- Calories: Around 120-150 kcal
+- Protein: 20-25 grams, as it is made almost entirely of gluten
+- Fat: Very low, typically around 1-2 grams
+- Carbohydrates: Low, around 5-8 grams, since the starch is usually washed away in its preparation
+</scratchpad>
+
+<calories>140</calories>
+<protein>25</protein>
+<fat>2</fat>
+<carbohydrates>8</carbohydrates>",140.0,25.0,2.0,8.0
+100% Whole Wheat Bread,Nature's Own,72250037129,231.0,46.2,1.92,11.5,7.69,3.85,1.16,,0.462,Basic Processed Foods,100% Whole Wheat Bread,"<scratchpad>
+100% Whole Wheat Bread is a common type of bread made with whole wheat flour which retains the entire grain, making it more nutritious than white bread. It is typically rich in carbohydrates and contains moderate amounts of protein and fat. It also has dietary fiber, and it's often considered a healthier choice owing to its complex carbohydrates and higher nutrients content compared to refined white bread.
+</scratchpad>
+
+<calories>250</calories>
+<protein>13</protein>
+<fat>4</fat>
+<carbohydrates>42</carbohydrates>",250.0,13.0,4.0,42.0
+White Sourdough Bread,Jason’s,5025125000112,236.8,46.016,0.6976,9.728,3.002,2.099,0.8,0.1,0.32,Basic Processed Foods,White Sourdough Bread,"<scratchpad>
+White sourdough bread is a type of bread made primarily from white flour, water, salt, and naturally occurring lactobacilli and yeast. Because it's made from white flour, it has a similar nutritional profile to other white breads but with some variations due to the fermentation process. Typically, white sourdough bread would contain a moderate amount of carbohydrates, a small amount of fat, a moderate amount of protein, and a relevant calorie content.
+</scratchpad>
+
+<calories>250</calories>
+<protein>9</protein>
+<fat>2</fat>
+<carbohydrates>49</carbohydrates>",250.0,9.0,2.0,49.0
+Tortilla Wraps with whole wheat,"Snack Day,Lidl",4056489506829,289.0,46.3,6.0,9.3,6.4,2.7,1.0,1.1,0.4,Basic Processed Foods,Tortilla Wraps with whole wheat,"<scratchpad>
+Tortilla wraps with whole wheat are a type of flatbread commonly used in Mexican cuisine, such as for making burritos or wraps. They are typically made from whole wheat flour, which gives them a higher fiber content compared to tortillas made from white flour. Given the whole wheat content, they are likely to have a moderate amount of protein and a relatively low fat content. Carbohydrates will be a significant component due to the flour. Here’s an approximate nutritional profile per 100 grams:
+- Calories: Moderate
+- Protein: Moderate
+- Fat: Low
+- Carbohydrates: High
+</scratchpad>
+
+<calories>300</calories>
+<protein>8</protein>
+<fat>5</fat>
+<carbohydrates>50</carbohydrates>",300.0,8.0,5.0,50.0
+Spaghetti N.5,"Barilla,Barilla Nr. 5, Barilla - Barilla G. e R. Fratelli - Società per Azioni - Via Mantova, 166, 43122 Parma - Italy",8076800195057,359.0,71.0,2.0,13.0,3.0,3.5,0.01,0.5,0.004,Basic Processed Foods,Spaghetti (Barilla),"<scratchpad>
+Spaghetti, especially from a brand like Barilla, is a type of pasta typically made from durum wheat semolina. It's a carbohydrate-rich food with some amount of protein and negligible fat. The nutritional content can vary slightly by brand, but it's usually within a certain range. Typical values for cooked spaghetti are approximately:
+Calories: 158 kcal 
+Protein: 5.8 grams 
+Fat: 0.9 grams 
+Carbohydrates: 30.9 grams
+</scratchpad>
+
+<calories>158</calories>
+<protein>5.8</protein>
+<fat>0.9</fat>
+<carbohydrates>30.9</carbohydrates>",158.0,5.8,0.9,30.9
+Pad Thai Rice Noodles,Thai Dragon,5020580019686,351.0,80.0,1.1,5.2,0.5,2.5,0.025,0.6,0.01,Basic Processed Foods,Pad Thai Rice Noodles,"<scratchpad>
+Pad Thai Rice Noodles is a popular Thai dish commonly made with rice noodles, shrimp or chicken, eggs, tofu, peanuts, bean sprouts, and a sauce made from tamarind paste, fish sauce, garlic, red chili pepper, sugar, and lime. 
+
+For estimation, consider the nutrition of rice noodles, some cooked protein (like shrimp or chicken), bean sprouts, and a blend of sauce ingredients. Rice noodles are primarily carbs with some minor fat and protein content. The protein from shrimp or chicken adds to the total protein. The sauce might add sugar (carbohydrates) and some fat.
+</scratchpad>
+
+<calories>200</calories>
+<protein>6</protein>
+<fat>8</fat>
+<carbohydrates>29</carbohydrates>",200.0,6.0,8.0,29.0
+gehackte Tomaten,Baresa,20004132,20.0,3.0,0.2,1.3,,3.0,0.04,0.1,0.016,Basic Processed Foods,Chopped tomatoes (canned),"<scratchpad>
+Chopped tomatoes (canned) are primarily composed of tomatoes and water, which suggests that they are low in calories. Tomatoes are known for being low in fat and contain some carbohydrates in the form of natural sugars and fiber. They also have a small amount of protein.
+
+Considering that they are canned, there might be some added sodium for preservation, but this won’t affect the macronutrient breakdown much. The nutritional content of canned tomatoes is similar to fresh tomatoes, though the canning process might slightly concentrate the nutrients due to the reduction of water content.
+</scratchpad>
+
+<calories>18</calories>
+<protein>1</protein>
+<fat>0.2</fat>
+<carbohydrates>4</carbohydrates>",18.0,1.0,0.2,4.0
+Baked beans,Freshona,20009847,83.0,12.4,0.6,4.1,,5.0,0.85,0.2,0.34,Basic Processed Foods,Baked beans (canned),"<scratchpad>
+Baked beans (canned) are typically made from navy beans, tomato sauce, brown sugar, and various seasonings. The beans provide a source of protein and carbohydrates, while the sauce adds additional carbohydrates from sugars and potentially some fat from added ingredients.
+</scratchpad>
+
+<calories>110</calories>
+<protein>5</protein>
+<fat>0.5</fat>
+<carbohydrates>20</carbohydrates>",110.0,5.0,0.5,20.0
+Altramuces,Hacendado,8480000331366,105.0,9.0,1.7,12.0,3.8,,3.5,0.3,1.4,Basic Processed Foods,Lupines (jarred),"<scratchpad>
+Lupines are a type of legume, often found jarred in brine. When considering canned or jarred lupines, we can assume they have been cooked and preserved, which may affect their nutritional content slightly compared to fresh lupines. However, the basic composition should be similar to cooked lupines. Typically, legumes are high in protein and carbohydrates, with relatively low fat and moderate calorie content.
+
+After researching similar legumes and considering the preservation method, a reasonable estimation of the nutritional content for jarred lupines per 100 grams would be approximately:
+
+- Calories: Moderate, typical of legumes.
+- Protein: High, due to their status as legumes.
+- Fat: Low to moderate, as legumes are not usually high in fat.
+- Carbohydrates: Moderate to high.
+</scratchpad>
+
+<calories>119</calories>
+<protein>15.6</protein>
+<fat>2.9</fat>
+<carbohydrates>12.1</carbohydrates>",119.0,15.6,2.9,12.1
+Ananas en tranches au sirop léger,Freshona,20253929,56.0,13.0,0.5,0.5,1.0,13.0,0.01,,0.004,Basic Processed Foods,Sliced ​​pineapple in light syrup (canned),"<scratchpad>
+Sliced pineapple in light syrup (canned) is a combination of pineapple and a light syrup, usually made of water, sugar, and possibly some preservatives.
+
+- Pineapple is fairly low in calories and has very little fat. It's composed primarily of water and carbohydrates, with a small amount of fiber and very little protein.
+- Light syrup adds additional sugar, increasing the carbohydrate content but doesn’t significantly contribute to fat or protein.
+
+Typically, canned fruit in light syrup will have higher sugar content compared to the fresh counterpart but will still be relatively low in other macronutrients.
+
+Based on these aspects, the estimated nutritional values for 100 grams of sliced pineapple in light syrup (canned) might be around:
+
+- Calories: 60-70
+- Protein: 0.4-0.6 grams
+- Fat: 0.1-0.2 grams
+- Carbohydrates: 15-18 grams
+</scratchpad>
+
+<calories>65</calories>
+<protein>0.5</protein>
+<fat>0.1</fat>
+<carbohydrates>17</carbohydrates>",65.0,0.5,0.1,17.0
+Épinards Branches à la Crème,Findus,3599741006329,68.0,5.8,3.1,3.5,1.6,1.9,0.6,2.0,0.24,Basic Processed Foods,Creamy Spinach Branches (frozen) (Findus),"<scratchpad>
+Creamy Spinach Branches (frozen) is a prepared frozen meal consisting primarily of spinach with a creamy sauce. Considering typical values for similar products:
+- Spinach itself is low in calories, protein, fat, and carbs.
+- The creamy sauce likely contains dairy or plant-based cream, contributing significant amounts of fat, some protein, and carbohydrates.
+
+Typical estimates for similar prepared frozen meals including creamy sauces:
+- Calories: Moderate due to dairy or cream.
+- Protein: Low to moderate depending on cream content.
+- Fat: Moderate due to cream content.
+- Carbohydrates: Moderate from cream and any added starches or thickeners.
+</scratchpad>
+
+<calories>100</calories>
+<protein>3</protein>
+<fat>8</fat>
+<carbohydrates>9</carbohydrates>",100.0,3.0,8.0,9.0
+"Légumes et Céréales Cuisinés, Patates douces, Edamame, Butternut & Boulgour, crème fraîche et persil",Bonduelle,3083681105247,95.0,11.8,2.9,3.9,2.9,3.3,0.74,0.8,0.296,Basic Processed Foods,"Cooked Vegetables and Cereals, Sweet Potatoes, Edamame, Butternut and Bulgur, crème fraîche and parsley (frozen) (Bonduelle)","<scratchpad>
+The given food item is a mix of cooked vegetables (sweet potatoes, edamame, butternut squash), bulgur (a type of whole grain), crème fraîche, and parsley, and it is frozen. This combination likely consists of various nutritional profiles:
+- Sweet Potatoes are moderately calorie-dense and rich in carbohydrates.
+- Edamame is high in protein and fiber.
+- Butternut Squash is low in calories and moderately high in carbohydrates.
+- Bulgur is a whole grain, rich in fiber and carbohydrates, with moderate protein levels.
+- Crème Fraîche adds fat and some protein.
+- Parsley is low in calories and provides some vitamins and minerals.
+
+Considering the mixture and the ranges typical for such ingredients, the values will have to reflect the balance of vegetables, grains, and a small amount of dairy.
+</scratchpad>
+
+<calories>90</calories>
+<protein>4</protein>
+<fat>3</fat>
+<carbohydrates>15</carbohydrates>",90.0,4.0,3.0,15.0
+Peanut Butter,Mcennedy,20474478,658.0,13.1,56.1,22.8,5.9,4.7,0.6,7.6,0.24,Basic Processed Foods,Peanut Butter,"<scratchpad>
+Peanut butter is a spread made from ground dry-roasted peanuts, often with added salt, sugar, and oil. It is high in protein and fat, and it contains a moderate amount of carbohydrates. Peanut butter is calorie-dense because of its fat content.
+</scratchpad>
+
+<calories>588</calories>
+<protein>25</protein>
+<fat>50</fat>
+<carbohydrates>20</carbohydrates>",588.0,25.0,50.0,20.0
+Bio Konfitüre Erdbeere,Maribel,20114671,242.0,59.0,0.1,0.3,,58.0,0.03,0.1,0.012,Basic Processed Foods,Organic Strawberry Jam,"<scratchpad>
+Organic strawberry jam is a sweet spread made primarily from strawberries, sugar, and pectin. It’s a processed food item high in carbohydrates mainly due to its sugar content.
+
+Calories: Given the high sugar content and berries, it's likely to be energy-dense.
+Protein: Strawberries contain minimal protein, and added sugar or pectin contribute none.
+Fat: Neither strawberries nor typical jam additives like sugar and pectin are significant sources of fats.
+Carbohydrates: High due to the sugar content; strawberries themselves add some but the majority comes from added sugar.
+</scratchpad>
+
+<calories>250</calories>
+<protein>0.5</protein>
+<fat>0.1</fat>
+<carbohydrates>60</carbohydrates>",250.0,0.5,0.1,60.0
+Corn Flakes,Kellogg's,5059319014814,378.0,84.0,0.9,7.0,3.0,8.0,1.1,0.2,0.44,Moderately Processed Foods,Corn Flakes (Kellogg's),"<scratchpad>
+Corn Flakes are a popular breakfast cereal made by Kellogg's. They are primarily made from milled corn, sugar, and malt flavoring. They are typically consumed with milk. Corn Flakes are generally low in fat and protein because they are mainly composed of carbohydrates.
+
+Calories estimate: Breakfast cereals usually fall within the range of about 350-400 kcal per 100 grams.
+Protein estimate: Corn-based products are generally low in protein, around 6-8 grams per 100 grams.
+Fat estimate: Corn flakes are very low in fat, typically around 0.5-1.5 grams per 100 grams.
+Carbohydrates estimate: The main component is carbohydrates, likely around 80-90 grams per 100 grams.
+</scratchpad>
+
+<calories>375</calories>
+<protein>7</protein>
+<fat>1</fat>
+<carbohydrates>85</carbohydrates>",375.0,7.0,1.0,85.0
+Protein-Packed Oatmeal,Kodiak,705599014147,380.0,62.0,5.0,24.0,6.0,20.0,0.85,1.0,0.34,Moderately Processed Foods,Protein-Packed Oatmeal (Kodiak),"<scratchpad>
+Protein-Packed Oatmeal (Kodiak) is a specific kind of instant oatmeal known for having a higher protein content compared to regular oatmeal. These types of products often use additional protein sources like whey protein isolate or milk protein concentrate. Nutritional values can vary by brand and specific formulation, but a rough estimate would be:
+
+- Calories: Instant oatmeal with more protein usually has a higher calorie content than regular instant oatmeal.
+- Protein: Enhanced significantly due to added protein sources.
+- Fat: Likely to have a moderate amount, sometimes increased slightly by the protein sources.
+- Carbohydrates: Still predominantly carbohydrate-rich, considering the oats as the main component.
+</scratchpad>
+
+<calories>370</calories>
+<protein>20</protein>
+<fat>7</fat>
+<carbohydrates>60</carbohydrates>",370.0,20.0,7.0,60.0
+Salt Chips,Lay's,5941000025639,549.0,53.0,34.0,6.1,4.4,0.5,1.1,4.2,0.44,Moderately Processed Foods,Salt Chips (Lay's),"<scratchpad>
+Salt chips, such as Lay's, are typically a high-calorie snack due to their frying process and added seasonings. They are made primarily from potatoes, which are high in carbohydrates. The frying process adds a significant amount of fat to the chips. There's very little protein in potato chips, and the carbohydrate content is also quite high due to the starchy nature of potatoes. The calorie count is also expected to be high.
+
+From general knowledge and common nutritional information about similar products, a rough estimation can be made as follows:
+- Calories are relatively high due to the added fat during frying.
+- Protein content is low.
+- Fat content is high due to the oil absorption during frying.
+- Carbohydrates are moderate to high from the potatoes.
+
+Estimated values typically found in similar products:
+Calories: around 536 per 100 grams
+Protein: about 7 grams per 100 grams
+Fat: approximately 34 grams per 100 grams
+Carbohydrates: roughly 53 grams per 100 grams
+</scratchpad>
+
+<calories>536</calories>
+<protein>7</protein>
+<fat>34</fat>
+<carbohydrates>53</carbohydrates>",536.0,7.0,34.0,53.0
+Sticks et bretzels,Carrefour,3245414021068,384.0,76.0,3.0,11.0,3.8,2.0,3.6,0.4,1.44,Moderately Processed Foods,Sticks and pretzels (Carrefour),"<scratchpad>
+Sticks and pretzels are typically baked snacks that are primarily composed of refined flour, salt, some fat, and sometimes sugar. Considering the nature of these snacks, they would have a moderate to high carbohydrate content due to the flour, a moderate amount of fat which may come from the butter or oil used in preparation, and a relatively low protein content. These products are generally low in moisture since they are baked to a dry consistency.
+
+Average nutritional values per 100 grams for similar products:
+- Calories: Roughly around 350-400 kcal
+- Protein: 7-10 grams
+- Fat: 3-10 grams
+- Carbohydrates: 70-80 grams
+</scratchpad>
+
+<calories>380</calories>
+<protein>8</protein>
+<fat>6</fat>
+<carbohydrates>75</carbohydrates>",380.0,8.0,6.0,75.0
+Tomato Ketchup,Heinz,8715700017006,102.0,23.2,0.1,1.2,,22.2,1.8,0.1,0.72,Moderately Processed Foods,Tomato Ketchup (Heinz),"<scratchpad>
+Tomato ketchup is a common condiment made primarily from tomatoes, vinegar, sugar, and spices. Given the brand (Heinz), it is essential to note the moderate amounts of sugar and salt typically present in such products. 
+
+- Calories: Generally, commercial ketchup is somewhat calorie-dense due to the added sugar.
+- Protein: Tomatoes themselves are low in protein, and ketchup does not contain significant protein.
+- Fat: Ketchup is usually very low in fat.
+- Carbohydrates: The primary source of carbs in ketchup is sugar from both tomatoes and added sugar.
+
+A rough estimation based on typical ketchup nutritional information is:
+- Calories: Around 100 kcal per 100 grams.
+- Protein: Very low, around 1 gram per 100 grams.
+- Fat: Very low, around 0.1 gram per 100 grams.
+- Carbohydrates: Higher due to sugar, around 25-30 grams per 100 grams. 
+
+Considering the above points, an estimation can be made.
+</scratchpad>
+
+<calories>100</calories>
+<protein>1</protein>
+<fat>0.1</fat>
+<carbohydrates>25</carbohydrates>",100.0,1.0,0.1,25.0
+Real Mayonnaise,Hellmann's,8722700479475,729.0,3.57,78.6,3.57,,1.3,,6.43,,Moderately Processed Foods,Real Mayonnaise (Hellmann's),"<scratchpad>
+Real Mayonnaise is a condiment made primarily of oil, egg yolk, and vinegar or lemon juice. Hellmann's Real Mayonnaise is known for its creamy texture and rich flavor. 
+
+1. **Calories**: Mayonnaise is high in calories due to its high oil content.
+2. **Protein**: The protein content is relatively low since the major sources are egg yolks.
+3. **Fat**: It is rich in fat as the majority of its ingredients are oil and egg yolks.
+4. **Carbohydrates**: Mayonnaise typically contains very little carbohydrates.
+
+Average Nutritional values per 100 grams of commercial mayonnaise:
+- Calories: Around 680-720 kcal
+- Protein: Generally low, around 1-2 grams
+- Fat: High, around 75-82 grams
+- Carbohydrates: Low, around 0.6 grams
+</scratchpad>
+
+<calories>700</calories>
+<protein>1</protein>
+<fat>77</fat>
+<carbohydrates>1</carbohydrates>",700.0,1.0,77.0,1.0
+Bacon,"Justin Bridou,Belles Tranches",3449865302664,129.0,0.3,2.5,23.0,,0.2,2.7,1.0,1.08,Moderately Processed Foods,Bacon,"<scratchpad>
+Bacon is a cured meat product, typically made from pork. It is known for being high in fat, with moderate protein content and very low carbohydrate content. The calorie content is generally high due to the fat content.
+
+Typical nutritional values per 100 grams for bacon are roughly:
+- Calories: High, due to fat content.
+- Protein: Moderate
+- Fat: High
+- Carbohydrates: Very low
+
+Upon looking up some standard values, we often find:
+- Calories: Between 400 - 500 calories per 100 grams
+- Protein: Around 12 - 15 grams per 100 grams
+- Fat: Around 40 - 50 grams per 100 grams
+- Carbohydrates: Less than 1 gram per 100 grams
+</scratchpad>
+
+<calories>450</calories>
+<protein>13</protein>
+<fat>45</fat>
+<carbohydrates>1</carbohydrates>",450.0,13.0,45.0,1.0
+Chicken Flavour,"YumYum,Yum Yum",8852018101024,80.0,8.6,4.4,1.2,,0.3,0.7775,1.8,0.311,Moderately Processed Foods,Chicken Flavour Instant Soup (Yum Yum),"<scratchpad>
+For Chicken Flavour Instant Soup (Yum Yum), we should consider this is a processed food item, often found in dehydrated or powder form. The nutrition profile will reflect that of typical instant soups, likely high in sodium and with moderate levels of protein and carbohydrates, but relatively low in overall caloric content given their preparation with water.
+
+Typical instant soups per 100 grams (in dehydrated form) might have:
+- Calories: Around 360 kcal
+- Protein: Approximately 10 grams
+- Fat: Around 5 grams
+- Carbohydrates: Approximately 60 grams
+
+However, considering that this 'per 100 grams' would be of the soup in its prepared (hydrated) form, the numbers would be much lower, given the dilution with water:
+
+Prepared soup might contain:
+- Calories: Around 30 kcal
+- Protein: Approximately 1 gram
+- Fat: Approximately 1 gram
+- Carbohydrates: Approximately 5 grams
+</scratchpad>
+
+<calories>30</calories>
+<protein>1</protein>
+<fat>1</fat>
+<carbohydrates>5</carbohydrates>",30.0,1.0,1.0,5.0
+Hummus de garbanzos receta clásica,Hacendado,8480000808585,311.0,11.1,25.8,6.0,8.0,0.1,0.855,3.3,0.342,Moderately Processed Foods,Hummus Classic (Hacendado),"<scratchpad>
+Hummus is typically made from cooked, mashed chickpeas or other beans, blended with tahini, olive oil, lemon juice, salt, and garlic. Here's a rough estimation of nutritional values per 100 grams based on typical hummus compositions:
+
+- Calories: Around 160-170 kcal
+- Protein: Chickpeas provide a decent amount of protein. Combined with tahini, protein content usually hovers around 8 grams.
+- Fat: Tahini and olive oil contribute significantly to the fat content. A typical portion has approximately 10 grams of fat.
+- Carbohydrates: Chickpeas and additional ingredients like lemon juice contribute some carbohydrates; approximate value is around 15-20 grams.
+
+Brand-specific variations can exist, but this provides a general nutritional profile for classic hummus.
+</scratchpad>
+
+<calories>167</calories>
+<protein>8</protein>
+<fat>10</fat>
+<carbohydrates>15</carbohydrates>",167.0,8.0,10.0,15.0
+Mango congelado,Carrefour,3560070259564,64.0,14.0,0.5,0.7,1.8,13.0,0.01,0.1,0.004,Moderately Processed Foods,Frozen Mango (Carrefour),"<scratchpad>
+Frozen mango is generally just regular mango that has been frozen. It doesn't usually have any added sugars or preservatives. Mangoes are known for being relatively high in natural sugars, thus contributing to their carbohydrate content. They also have a small amount of protein and fat, but they're primarily known for their vitamin and fiber content. Considering it is frozen, this process doesn't significantly alter the nutritional content compared to fresh mango.
+</scratchpad>
+
+<calories>60</calories>
+<protein>1</protein>
+<fat>0.2</fat>
+<carbohydrates>15</carbohydrates>",60.0,1.0,0.2,15.0
+Vegan pizza Bruschetta,Vemondo,4056489451136,157.0,26.2,3.1,5.0,,4.1,0.78,0.6,0.312,Highly Processed Foods,Vegan pizza Bruschetta - Vemondo (ready meal),"<scratchpad>
+Vegan pizza Bruschetta is a prepared food item designed to be a pizza with toppings commonly found in bruschetta, such as tomatoes, garlic, and herbs, but made without any animal products. Considering it's a ready meal, it likely contains a mix of bread (pizza crust), vegetables, some plant-based cheese, and possibly olive oil or other plant-based oils.
+
+1. Calories: Vegan ready meals often have a moderate calorie count due to their combination of carbohydrates, fats, and protein from plant-based sources. 
+2. Protein: This will come mainly from the crust and any plant-based cheese or protein added.
+3. Fat: Likely to be moderate due to the use of plant-based oils and possibly some plant-based cheese.
+4. Carbohydrates: High, mainly due to the pizza crust.
+
+Typical values for similar items might be:
+- Calories: Moderate, likely around 200-300 per 100g.
+- Protein: Moderate, typically around 5-10 grams per 100g.
+- Fat: Moderate, usually around 7-15 grams per 100g.
+- Carbohydrates: High, around 30-40 grams per 100g.
+</scratchpad>
+
+<calories>250</calories>
+<protein>8</protein>
+<fat>10</fat>
+<carbohydrates>35</carbohydrates>",250.0,8.0,10.0,35.0
+Chicken Nuggets 12er,"Toque du Chef, Chef Select",20621650,230.0,16.5,13.0,10.9,1.6,1.5,1.33,2.1,0.531,Highly Processed Foods,Chicken Nuggets 12er (Tque du Chef),"<scratchpad>
+Chicken nuggets are generally deep-fried or baked pieces of chicken meat, often breaded or battered, making them relatively high in calories, fats, and carbohydrates due to the breading or batter. Typically, proteins are moderate to high because of the chicken content.
+
+- Calories: Chicken nuggets are usually fried and breaded, leading to relatively high energy content.
+- Protein: Moderate to high, depending on the proportion of chicken meat to breading.
+- Fat: Often fried, adding significant fat content.
+- Carbohydrates: The breading/batter contributes a significant amount of carbs.
+
+Typical nutritional values for chicken nuggets per 100 grams:
+- Calories: Around 250-300 kcal
+- Protein: Around 15-20 grams
+- Fat: Around 15-20 grams
+- Carbohydrates: Around 15-20 grams
+
+Considering this brand (Tque du Chef), these estimations should be in line with general expectations.
+</scratchpad>
+
+<calories>280</calories>
+<protein>17</protein>
+<fat>18</fat>
+<carbohydrates>19</carbohydrates>",280.0,17.0,18.0,19.0
+bâtonnets de surimi,coraya l'original,3276170011185,112.0,10.0,4.2,8.2,,2.3,1.5,0.3,0.6,Highly Processed Foods,surimi sticks (coraya l'original),"<scratchpad>
+Surimi sticks, particularly the brand ""Coraya l'Original,"" are typically made from processed fish (usually pollock or a similar white fish) and are often flavored and colored to resemble crab meat. They generally contain fish paste, water, starch, egg whites, salt, sugar, sorbitol, soy protein, and a variety of other ingredients. The nutritional profile would resemble that of a processed seafood product with added starches and proteins.
+
+- **Calories**: Because of the mix of fish and starches, surimi sticks tend to be relatively low in fat and moderate in protein and carbohydrates.
+- **Protein**: The fish content provides a decent amount of protein.
+- **Fat**: Generally low in fat since most of the fat in fish is leached out during processing.
+- **Carbohydrates**: Contains carbs due to added starches and sugars.
+
+Typical estimations for surimi sticks are roughly:
+- Calories: 100 kcal
+- Protein: 10 g
+- Fat: 1 g
+- Carbohydrates: 15 g
+</scratchpad>
+
+<calories>100</calories>
+<protein>10</protein>
+<fat>1</fat>
+<carbohydrates>15</carbohydrates>",100.0,10.0,1.0,15.0
+Ravioli 800g panza pur boeuf,Panzani,3038352880305,91.0,13.0,2.3,3.8,1.6,1.4,0.85,0.8,0.34,Highly Processed Foods,Ravioli 800g belly pur boeuf (Panzani) (canned),"<scratchpad>
+Ravioli is a type of pasta that can be stuffed with various fillings such as meat (in this case, beef). The ravioli is sold canned, which means it also contains sauce. The nutritional content will include pasta, meat (beef), and tomato or other sauce. Given it is a pre-made, canned product, the fat, calories, and sodium might be relatively higher due to added oils and preservatives generally used in canned goods.
+
+Estimated nutritional content for a general canned ravioli:
+- Calories: Moderate to high because of the pasta, filling, and sauce.
+- Protein: Moderate due to beef filling.
+- Fat: Moderate to high due to the meat and possible oils used in sauce.
+- Carbohydrates: High due to the pasta.
+
+Based on similar products, a reasonable estimate might be:
+Calories: 120-140 kcal
+Protein: 5-8 grams
+Fat: 3-6 grams
+Carbohydrates: 15-30 grams
+</scratchpad>
+
+<calories>140</calories>
+<protein>6</protein>
+<fat>5</fat>
+<carbohydrates>20</carbohydrates>",140.0,6.0,5.0,20.0
+Doonuts,St Michel,3178530412697,453.0,54.0,25.0,5.7,1.1,31.0,0.33,4.5,0.132,Highly Processed Foods,Doonuts (St Michel),"<scratchpad>
+Doonuts from St Michel are a type of donut, which is generally a fried dough pastry. Since donuts are often high in fat and carbohydrates due to the frying process and the sugar content, we can estimate the nutrient content based on typical nutritional values for a donut.
+
+Typical nutritional values for a fried donut (per 100 grams):
+- Calories: Around 452 kcal
+- Protein: Approximately 4 grams
+- Fat: Approximately 25 grams
+- Carbohydrates: Approximately 51 grams
+
+</scratchpad>
+
+<calories>452</calories>
+<protein>4</protein>
+<fat>25</fat>
+<carbohydrates>51</carbohydrates>",452.0,4.0,25.0,51.0
+70% Cacao noir intense,Lindt,3046920022651,566.0,34.0,41.0,9.5,,30.0,0.1,24.0,0.04,Highly Processed Foods,Chocolate - 70% Intense black cocoa (Lindt),"<scratchpad>
+Chocolate - 70% intense black cocoa (Lindt) is a dark chocolate variety. Dark chocolate generally contains a higher amount of cocoa solids combined with cocoa butter, and often contains less sugar compared to milk chocolate. Specifically, 70% chocolate has a high percentage of cacao content. 
+
+Typical nutrient breakdown per 100 grams for 70% dark chocolate:
+- Calories: Around 600 kcal
+- Protein: Moderate amount, approximately 7-8 grams
+- Fat: High, largely due to the cocoa butter, around 40-45 grams
+- Carbohydrates: Remaining composition mainly includes carbohydrates, which could be around 45-50 grams given the fiber and sugars content
+
+Now I'll estimate specific values for this item:
+
+- Calories: 605 kcal per 100 grams
+- Protein: 7.8 grams per 100 grams
+- Fat: 44 grams per 100 grams
+- Carbohydrates: 46 grams per 100 grams
+</scratchpad>
+
+<calories>605</calories>
+<protein>7.8</protein>
+<fat>44</fat>
+<carbohydrates>46</carbohydrates>",605.0,7.8,44.0,46.0
+Ванилов сладолед с парчета бисквити с шоколадов чипс и шоколадови парчета,Ben & Jerry's,8711327373105,273.0,31.0,15.0,4.1,,25.0,0.17,9.2,0.068,Highly Processed Foods,Vanilla ice cream with chunks of chocolate chip cookies and chocolate chunks (Ben & Jerry's),"<scratchpad>
+Vanilla ice cream itself tends to be high in calories, fats, and sugars due to the cream and sugar used. Adding chunks of chocolate chip cookies and chocolate chunks increases these values significantly. Chocolate chip cookies generally contain a lot of fats, sugars, and carbs, while chocolate chunks add more fats and sugars on top of that. 
+
+We can break down the components loosely:
+- Vanilla ice cream: moderate protein, high fat, high carbs
+- Chocolate chip cookies: high fat, high carbs, moderate protein
+- Chocolate chunks: high fat, moderate carbs, low protein
+
+Combined, this might look like:
+Calories: High
+Protein: Moderate
+Fat: High
+Carbs: High
+</scratchpad>
+
+<calories>300</calories>
+<protein>4</protein>
+<fat>18</fat>
+<carbohydrates>35</carbohydrates>",300.0,4.0,18.0,35.0
+,"Bedo Imex B.V., microwave",8714601010895,476.0,56.0,22.0,9.0,11.0,8.0,1.5,11.0,0.6,Highly Processed Foods,"Pop corn caramel salé (Bedo Imex B.V., microwave)","<scratchpad>
+Considering the item ""Pop corn caramel salé (Bedo Imex B.V., microwave),"" it is a type of caramel popcorn that is prepared in a microwave. Caramel popcorn typically contains popped corn kernels, caramel coating made from sugar, butter, and possibly salt. The nutritional profile will include added sugars and fats from the caramel coating.
+
+Estimated average nutritional values per 100 grams are:
+- Calories: Significant, due to sugar and fat.
+- Protein: Low, primarily from the corn.
+- Fat: Moderately high, due to butter and oils used in caramel.
+- Carbohydrates: High, mostly sugars and some starch from the corn.
+
+Typical values for similar products:
+Calories: ~400-500 kcal
+Protein: ~2-4 grams
+Fat: ~10-15 grams
+Carbohydrates: ~80 grams
+</scratchpad>
+
+<calories>450</calories>
+<protein>3</protein>
+<fat>12</fat>
+<carbohydrates>80</carbohydrates>",450.0,3.0,12.0,80.0
+Hot Dog saucisses fumées,McEnnedy,20149710,227.0,1.0,19.0,13.0,,1.0,1.75,7.6,0.7,Highly Processed Foods,Hot Dog Sausages (McEnnedy) (jarred),"<scratchpad>
+Hot dog sausages, especially those jarred like McEnnedy's, are processed meats. They generally contain a mix of meat (often pork, beef, or turkey), fat, some carbohydrate sources (like starch or fillers), water, and seasoning. They tend to be high in fat and protein while also containing some carbohydrates. The following estimates are for 100 grams of hot dog sausages:
+
+1. **Calories**: These are likely to be high because they contain both fat and protein.
+2. **Protein**: Given the meat content, they are a good source of protein.
+3. **Fat**: Processed and jarred hot dog sausages tend to have a high fat content.
+4. **Carbohydrates**: There may be some carbohydrates from fillers and seasonings but generally not a large amount.
+</scratchpad>
+
+<calories>290</calories>
+<protein>12</protein>
+<fat>25</fat>
+<carbohydrates>3</carbohydrates>",290.0,12.0,25.0,3.0
+Cheese Puffs,Snackrite,4088600272641,512.0,61.0,27.0,5.7,1.0,10.0,1.7,2.3,0.68,Highly Processed Foods,Cheese Puffs (Snackrite),"<scratchpad>
+Cheese Puffs are typically a crunchy, cheese-flavored snack. They are usually made from cornmeal, oils, and cheese powder. Given that this is a common type of cheese puff, the nutritional content can be compared to similar products on the market. Such snacks often have a high fat content due to the oil they are fried in, moderate protein mainly from the cheese powder, and high carbohydrates from the cornmeal base.
+</scratchpad>
+
+<calories>550</calories>
+<protein>7</protein>
+<fat>33</fat>
+<carbohydrates>53</carbohydrates>",550.0,7.0,33.0,53.0
+Stew Type Spicy Chicken Flavor Ramen,Buldak,8801073113381,352.0,57.9,10.3,6.9,1.38,6.21,3.9,4.83,1.56,Highly Processed Foods,Stew Type Spicy Chicken Flavor Ramen (Buldak),"<scratchpad>
+Stew Type Spicy Chicken Flavor Ramen (Buldak) is a highly popular instant noodle dish known for its intense spiciness and rich flavor. It's typically composed of wheat noodles, seasoning powder, and various oils and spices. 
+
+Considering instant noodles in general:
+- They are usually calorie-dense due to the frying process and the addition of oils.
+- They have moderate protein content due to the wheat noodles.
+- Fat content is relatively high, primarily from the frying oil and supplementary fats in the seasoning.
+- Carbohydrates are also high, primarily from the wheat noodles.
+
+Approximations:
+- Calories: Around 450-500 calories per 100 grams (since fried and flavored)
+- Protein: Around 8-10 grams per 100 grams
+- Fat: Around 20-22 grams per 100 grams
+- Carbohydrates: Around 60-65 grams per 100 grams
+</scratchpad>
+
+<calories>480</calories>
+<protein>9</protein>
+<fat>21</fat>
+<carbohydrates>63</carbohydrates>",480.0,9.0,21.0,63.0
+Erbseneintopf,"Kania,Lidl",20030841,79.0,9.8,1.6,5.0,,0.2,1.0,0.5,0.4,Highly Processed Foods,Pea stew (instant) (Kania),"<scratchpad>
+Pea stew, especially when it comes as an instant product like the one by Kania, likely contains a mix of dehydrated peas, vegetables, and potentially some seasonings or additives. Generally, dehydrated peas retain most of their nutritional content but lose some water content.
+
+Considering it's a stew, it would typically rehydrate and absorb some water, but the core nutritional components per 100 grams when prepared should still reflect the nutrient density of the peas and vegetables, albeit slightly lower due to the dilution with water. Compared to fresh pea stew, instant varieties might have more sodium and potentially other preservatives.
+
+From my knowledge of typical pea stew and instant versions of food:
+- Peas are relatively high in calories, protein, and carbohydrates.
+- Instant stew mixes might have reduced actual nutrient density per 100g due to added water.
+
+Hence:
+Calories: 80 kcal - typical for a rehydrated, hearty soup.
+Protein: 3.5 g - pea-based dishes are protein-rich for vegetables, but slightly reduced when rehydrated.
+Fat: 1 g - negligible considering it's mostly from peas and vegetables.
+Carbohydrates: 14 g - peas and added vegetables contribute to this value.
+</scratchpad>
+
+<calories>80</calories>
+<protein>3.5</protein>
+<fat>1</fat>
+<carbohydrates>14</carbohydrates>",80.0,3.5,1.0,14.0
+Optimum Nutrition Gold Standard Whey,Optimum nutrition,5060469988566,377.0,5.67,4.33,80.0,,3.33,0.233,1.33,0.0933,Specialty Foods,Optimum Nutrition Gold Standard Whey,"<scratchpad>
+Optimum Nutrition Gold Standard Whey is a popular protein powder supplement. These supplements typically have a high protein content with low amounts of fat and carbohydrates. A general estimate for similar whey protein powders per 100 grams would be:
+
+Calories: Generally around 360-400 kcal per 100 grams.
+Protein: High protein content, usually about 75-85 grams per 100 grams.
+Fat: Low fat content, generally around 4-7 grams per 100 grams.
+Carbohydrates: Low carbohydrate content, typically around 5-8 grams per 100 grams.
+</scratchpad>
+
+<calories>380</calories>
+<protein>80</protein>
+<fat>5</fat>
+<carbohydrates>5</carbohydrates>",380.0,80.0,5.0,5.0
+Chocolate brownie protein bar,Lidl Stiftung & Co. KG,20035525,369.0,25.3,10.9,50.0,1.11,5.33,0.00261,6.0,0.00104,Specialty Foods,Chocolate brownie protein bar,"<scratchpad>
+Given it is a chocolate brownie protein bar, it is likely a high-protein snack with considerable calorie content. We need to consider the usual components of such bars, which typically include protein powder, chocolate, sweeteners, and fats.
+
+Calories: 
+These bars are usually energy-dense due to their protein and fat content. A typical range might be around 350 to 400 kcal per 100 grams.
+
+Protein:
+Protein bars are designed to be protein-rich. A typical content for protein bars can range from 20 to 30 grams per 100 grams.
+
+Fat: 
+The fat content can vary, especially if nuts or additional fats are present. A reasonable estimate for fat content might range from 10 to 15 grams per 100 grams.
+
+Carbohydrates:
+Carbohydrate content can vary widely depending on the amount of sugar or other sweeteners used. A reasonable estimate might be in the range of 30 to 40 grams per 100 grams.
+
+Summarizing all components:
+Calories: 380
+Protein: 25
+Fat: 15
+Carbohydrates: 35
+</scratchpad>
+
+<calories>380</calories>
+<protein>25</protein>
+<fat>15</fat>
+<carbohydrates>35</carbohydrates>",380.0,25.0,15.0,35.0
+Beyond Burger,Beyond Meat,850004207390,196.0,5.6,12.0,16.0,1.2,0.6,0.7375,2.9,0.295,Specialty Foods,Beyond Burger (Beyond Meat),"<scratchpad>
+The Beyond Burger is a well-known plant-based burger patty. Its ingredients often include pea protein isolate, coconut oil, canola oil, and various other ingredients to give it a meat-like texture and flavor. Given these ingredients, it is likely to have a relatively high protein content with moderate amounts of fat and carbohydrates. 
+
+Typical nutritional values for similar plant-based burger patties can be:
+- Calories: Moderate due to the fat content from oils and proteins.
+- Protein: High due to pea protein isolate.
+- Fat: Moderate to high because of coconut oil and canola oil.
+- Carbohydrates: Moderately low as the focus is more on protein and fats.
+
+Approximate nutritional values per 100g for a similar product would be:
+- Calories: 250
+- Protein: 20 grams
+- Fat: 18 grams
+- Carbohydrates: 7 grams
+</scratchpad>
+
+<calories>250</calories>
+<protein>20</protein>
+<fat>18</fat>
+<carbohydrates>7</carbohydrates>",250.0,20.0,18.0,7.0
+Vegane Bio Tomate Kräuter,"Mein Veggie Tag,Aldi,Tofu Life,InnFood",4061458069762,241.0,10.5,20.0,4.1,1.5,6.5,0.9,2.1,0.36,Specialty Foods,Vegan Organic Tomato Herbs Spread (Mein Veggie Tag),"<scratchpad>
+Given that the item is a Vegan Organic Tomato Herbs Spread, it likely includes ingredients such as tomatoes, various herbs, possibly olive oil or another plant-based oil, and other vegetables or spices commonly found in spreads. Typically, spreads like these are relatively low in calories but contain some amount of fat from the oil and may have some carbohydrates from the tomatoes and any added sugars.
+
+Typical nutritional breakdown estimates for similar vegan tomato-herb-based spreads can be made by considering:
+- Tomatoes are low in calories and have a decent amount of carbohydrates.
+- Herbs generally contribute minimal calories or nutrients.
+- Olive oil or plant-based oils add fat and calories.
+- Additional vegetables would add minor carbohydrate content.
+
+Thus, I estimate the following nutritional values per 100 grams:
+- Calories: Approximately 50-100 kcal
+- Protein: Low, approximately 1-2 grams
+- Fat: Low to moderate, around 3-8 grams
+- Carbohydrates: Moderate, between 6-12 grams
+
+</scratchpad>
+
+<calories>75</calories>
+<protein>1.5</protein>
+<fat>5</fat>
+<carbohydrates>10</carbohydrates>",75.0,1.5,5.0,10.0
+Tofu toscana,"Lidl,Vemondo",4056489332848,142.0,2.5,8.9,13.0,,0.5,0.9,1.0,0.36,Specialty Foods,Tofu (toscana marinata) (Vemondo),"<scratchpad>
+Tofu is generally a high-protein, low-carb, and low-fat food. Toscana Marinata likely refers to a flavored or marinated version which might introduce additional calories, fat, and possibly slightly different carb content due to the marinade ingredients. Vemondo is a brand that focuses on plant-based products, so we would still expect typical tofu nutrition with some slight variations.
+
+Typical nutrition for plain tofu (per 100 grams):
+- Calories: approximately 70-80 kcal
+- Protein: approximately 8-10 grams
+- Fat: approximately 4-5 grams
+- Carbohydrates: approximately 1-2 grams
+
+Considering the marinated aspect, which could include oils and flavorings:
+- Calories: likely increased due to marinade, approximate increase to 100-120 kcal
+- Protein: likely stays the same, around 8-10 grams
+- Fat: increases due to marinade, approximate increase to 6-8 grams
+- Carbohydrates: slight increase due to marinade, approximate increase to 3-4 grams
+</scratchpad>
+
+<calories>110</calories>
+<protein>9</protein>
+<fat>7</fat>
+<carbohydrates>3</carbohydrates>",110.0,9.0,7.0,3.0
+Dijon mustard,Bramwells,4088600249414,154.0,3.9,11.0,6.9,3.2,2.4,5.0,0.8,2.0,Specialty Foods,Dijon mustard,"<scratchpad>
+Dijon mustard is a type of mustard that usually contains ingredients such as mustard seeds, vinegar, water, and salt. The nutrition profile for Dijon mustard will be quite different from that of raw mustard seeds, as it includes other components and is prepared. Condiments like Dijon mustard are generally low in calories, protein, fat, and carbohydrates, but there are some minimal amounts.
+
+1. **Calories:**
+   - Condiments like Dijon mustard are low in calories. For 100 grams, the calorie count is usually around 60-80 calories.
+
+2. **Protein:**
+   - Given the primary ingredient is mustard seeds, a small amount of protein will be present. For 100 grams, there might be about 4-5 grams of protein.
+
+3. **Fat:**
+   - Per 100 grams, the fat content is also low, possibly around 3-5 grams.
+
+4. **Carbohydrates:**
+   - Dijon mustard has a minimal carbohydrate content because it doesn’t have any sugary additives. It might contain around 3-5 grams of carbohydrates per 100 grams.
+</scratchpad>
+
+<calories>70</calories>
+<protein>4</protein>
+<fat>4</fat>
+<carbohydrates>5</carbohydrates>",70.0,4.0,4.0,5.0
+Paleta de cebo iberica,Carrefour,8431876277630,300.0,0.5,21.0,27.0,,0.5,3.5,8.5,1.4,Specialty Foods,Iberian Cebo Shoulder,"<scratchpad>
+Iberian Cebo Shoulder is a type of cured ham made from the meat of the Iberian pig. It is known for its rich flavor and marbling of fat. Given its source and preparation method, we can expect it to be high in protein and fat, with minimal carbohydrates. 
+
+Typical nutritional values for similar cured meats (like prosciutto and other types of ham) are as follows:
+- Calories: 250-300 kcal per 100 grams
+- Protein: 25-30 grams per 100 grams
+- Fat: 15-20 grams per 100 grams
+- Carbohydrates: 0-2 grams per 100 grams
+
+Taking these into account, we can estimate the values for Iberian Cebo Shoulder.
+</scratchpad>
+
+<calories>290</calories>
+<protein>27</protein>
+<fat>19</fat>
+<carbohydrates>1</carbohydrates>",290.0,27.0,19.0,1.0
+Jackfruit young tender pieces,Biona Organic,5032722316140,86.0,19.5,0.2,1.5,,,0.84,,0.336,Specialty Foods,Jackfruit young tender pieces,"<scratchpad>
+Jackfruit young tender pieces are often considered a low-calorie food. They are typically low in fat and provide a moderate amount of carbohydrates and protein. 
+
+Based on typical nutritional values:
+- Calories: Likely around 95 per 100 grams.
+- Protein: Jackfruit has a small but notable protein content.
+- Fat: Generally very low in fat.
+- Carbohydrates: High due to natural sugars and fiber content.
+
+Typical estimates:
+- Calories: 95 calories/100g
+- Protein: 1.5 grams/100g
+- Fat: 0.3 grams/100g
+- Carbohydrates: 23.5 grams/100g
+</scratchpad>
+
+<calories>95</calories>
+<protein>1.5</protein>
+<fat>0.3</fat>
+<carbohydrates>23.5</carbohydrates>",95.0,1.5,0.3,23.5
+Apple Juice,"Solevita,Vitafit,Naturis",20569105,45.0,10.4,0.1,0.1,0.5,9.9,0.01,0.1,0.004,Beverages,Apple Juice (Solevita),"<scratchpad>
+Apple juice, especially from a brand like Solevita, is typically made from concentrated apple juice. It generally contains natural sugars and a small amount of vitamins and minerals. Commercially available apple juice often doesn't have significant amounts of protein or fat. It is mostly composed of water and carbohydrates, primarily in the form of natural sugars.
+
+Based on this, apple juice would have a moderate calorie count primarily from sugars, almost negligible protein and fat content, and a significant amount of carbohydrates.
+</scratchpad>
+
+<calories>46</calories>
+<protein>0.1</protein>
+<fat>0.1</fat>
+<carbohydrates>11.0</carbohydrates>",46.0,0.1,0.1,11.0
+Limonata,"San Pellegrino, Nestlé",8002270576829,22.0,4.5,0.1,0.1,0.3,4.5,,,,Beverages,Limonata (San Pellegrino),"<scratchpad>
+San Pellegrino Limonata is a carbonated soft drink with lemon flavor. It is sweet and typically contains sugar or sweeteners, making it high in carbohydrates but low in fat and protein.
+</scratchpad>
+
+<calories>44</calories>
+<protein>0</protein>
+<fat>0</fat>
+<carbohydrates>11</carbohydrates>",44.0,0.0,0.0,11.0
+Unsweetened Coconut UHT,Koko,5060100601861,19.0,0.4,1.4,1.2,0.2,0.2,0.1,1.2,0.04,Beverages,Unsweetened Coconut UHT milk (Koko),"<scratchpad>
+Unsweetened Coconut UHT milk (Koko) is a commercially available plant-based milk alternative made primarily from coconut. Coconut milk is known for its relatively high fat content, but because this product is unsweetened and UHT (ultra-heat treated), it is likely to have a different nutritional profile compared to the raw form of coconut milk or sweetened versions.
+
+Coconut milk (unsweetened) typically contains:
+- Moderate to high fat content, primarily from coconuts
+- Relatively low protein content
+- Low carbohydrate content due to the absence of added sugars
+- The product is often diluted with water, especially in UHT varieties, which can affect the caloric and nutrient density.
+
+Standard unsweetened coconut milk (UHT):
+- Calories: Around 20-30 kcal per 100 grams
+- Protein: Generally low, roughly 0.1-0.5 grams per 100 grams
+- Fat: Approximately 1-2 grams per 100 grams
+- Carbohydrates: Typically around 0.5-1 grams per 100 grams
+
+Considering these factors, the estimate for Unsweetened Coconut UHT milk (Koko) would be:
+</scratchpad>
+
+<calories>24</calories>
+<protein>0.2</protein>
+<fat>1.8</fat>
+<carbohydrates>0.6</carbohydrates>",24.0,0.2,1.8,0.6
+BLT Sandwich,REWE to go,4388844252233,255.0,18.60000038,15.19999981,9.300000191,,2.900000095,1.3,2.599999905,0.52,Composite Dishes,BLT Sandwich (REWE to go),"<scratchpad>
+A BLT sandwich typically consists of bacon, lettuce, tomato, and mayonnaise, all placed between slices of bread. Therefore, its nutritional content will be a combination of these ingredients. Here's a rough breakdown by component:
+
+1. Bread: Generally, bread provides carbohydrates and some protein.
+2. Bacon: This adds fat and protein.
+3. Lettuce: Contributes minimal calories, mostly water, with a tiny bit of vitamins and fiber.
+4. Tomato: Low in calories, with a small amount of carbs and vitamins.
+5. Mayonnaise: Adds fat and some calories due to its oil content.
+
+Since this is a sandwich from REWE to go, it might also have some preservatives and possibly additional ingredients contributing to a slightly different nutritional profile than a homemade BLT.
+
+Taking all these into consideration, I'll estimate the average nutritional values per 100 grams of this pre-made BLT sandwich.
+</scratchpad>
+
+<calories>250</calories>
+<protein>10</protein>
+<fat>15</fat>
+<carbohydrates>20</carbohydrates>",250.0,10.0,15.0,20.0
+Pizza fresca pepperoni,Casa Tarradellas,8410762220585,296.0,27.6,14.2,14.4,,1.8,1.7,6.7,0.68,Composite Dishes,Pizza fresca pepperoni (Casa Tarradellas),"<scratchpad>
+Pizza fresca pepperoni is a prepared meal commonly available in supermarkets. It consists of a wheat-based crust, tomato sauce, cheese, and pepperoni. Considering the usual ingredients and their proportions, an estimate for nutritional values is as follows:
+
+1. **Crust**: Made from refined wheat flour, contributing significant carbohydrates and some protein and fat. 
+2. **Tomato Sauce**: Mostly water with some carbohydrates and negligible fat and protein.
+3. **Cheese**: High in fat and protein, moderate in carbohydrates.
+4. **Pepperoni**: High in fat and protein, low in carbohydrates.
+
+Taking these components and their traditional proportions in a pizza recipe, we can estimate the nutritional values per 100 grams of this item.
+</scratchpad>
+
+<calories>270</calories>
+<protein>12</protein>
+<fat>13</fat>
+<carbohydrates>27</carbohydrates>",270.0,12.0,13.0,27.0
+Cream of Tomato Soup,Heinz,5000157062673,,7.2,2.3,0.9,0.6,5.1,0.6,0.2,0.24,Composite Dishes,Cream of Tomato Soup (Heinz),"<scratchpad>
+Cream of Tomato Soup (Heinz) is a popular canned soup. It's likely to contain tomatoes, cream, and various seasonings. Being a soup, it will have a considerable water content, which dilutes its overall nutritional density compared to solid foods.
+Typical ingredients for a cream of tomato soup might include tomatoes, water, cream, possibly sugar, salt, and various spices.
+
+- Calories: Given the water content and the nature of the ingredients, the calorie count should be moderate, not too high.
+Considering the cream, a lightly creamy soup will contribute to the calories.
+- Protein: Tomatoes and cream provide minimal protein; thus, the value will be on the lower side.
+- Fat: The fat content will be derived primarily from the cream.
+- Carbohydrates: Mainly derived from the tomatoes and possibly added sugar.
+
+A reasonable estimate per 100 grams based on similar products:
+- Calories: 50-60 kcal
+- Protein: 1-2 grams
+- Fat: 2-3 grams
+- Carbohydrates: 8-10 grams
+</scratchpad>
+
+<calories>56</calories>
+<protein>1</protein>
+<fat>2</fat>
+<carbohydrates>9</carbohydrates>",56.0,1.0,2.0,9.0
+Boeuf bourguignon,Lidl,20289201,64.0,5.4,1.2,7.0,,1.3,1.1,0.5,0.44,Composite Dishes,Boeuf bourguignon (Lidl),"<scratchpad>
+Boeuf bourguignon is a classic French stew made with beef braised in red wine, typically accompanied by carrots, onions, mushrooms, and sometimes bacon. The Lidl version of this dish might vary slightly in ingredients but generally will maintain a similar nutritional profile.
+
+Beef is the primary protein source, likely providing a substantial portion of protein and some fat. Red wine will contribute to the carbohydrates, alongside vegetables. The bacon, if included, adds more fat and a small amount of protein.
+
+Estimated breakdown:
+- Calories: Mainly from beef, some from vegetables and wine, plus a bit from added fats.
+- Protein: Mostly from the beef.
+- Fat: A combination of beef fat, bacon fat, and any added oils or butter.
+- Carbohydrates: From red wine used in the braise and the vegetables.
+
+Considering the balance and typical preparation method, a reasonable estimate for Boeuf bourguignon (Lidl) per 100 grams would be:
+</scratchpad>
+
+<calories>150</calories>
+<protein>10</protein>
+<fat>8</fat>
+<carbohydrates>5</carbohydrates>",150.0,10.0,8.0,5.0
+Lasaña Fácil,El Pavo,8410173072025,360.0,73.0,1.4,12.0,3.9,1.5,,0.2,,Composite Dishes,Lasaña Fácil (El Pavo),"<scratchpad>
+""Lasaña Fácil (El Pavo)"" suggests it is a pre-made lasagna meal featuring ground turkey (pavo in Spanish). Lasagna generally contains pasta, cheese, ground meat, tomato sauce, and various seasonings. Ground turkey is leaner than beef but still contains some fat and protein. The pasta will contribute carbohydrates, and cheese will add both fat and protein. 
+
+Considering typical lasagna nutritional content, I would estimate the following per 100 grams:
+
+- Calories: Moderate due to the mix of carbohydrates from pasta, fats from cheese, and proteins from the turkey.
+- Protein: Moderate because turkey is a good protein source and cheese also adds protein.
+- Fat: Moderate, mainly from cheese and some from the turkey.
+- Carbohydrates: Moderate to high due to the pasta.
+</scratchpad>
+
+<calories>180</calories>
+<protein>10</protein>
+<fat>8</fat>
+<carbohydrates>15</carbohydrates>",180.0,10.0,8.0,15.0
+Chili con carne,Hacendado,8480000231376,114.0,7.7,4.7,8.2,4.0,2.8,1.0,1.1,0.4,Composite Dishes,Chili con carne (Hacendado),"<scratchpad>
+Chili con carne is a traditional dish that typically includes ground meat (usually beef), beans, tomatoes, onions, bell peppers, and a variety of spices such as chili powder, cumin, and garlic. 
+
+For a prepared version like Hacendado Chili con carne, I will consider an average nutrient profile:
+
+1. **Calories**: The combination of meat, beans, and other ingredients makes this a substantial dish in terms of calories.
+2. **Protein**: Ground beef and beans are both good sources of protein.
+3. **Fat**: Ground meat typically contains some amount of fat, and there could be added oils or fats used during preparation.
+4. **Carbohydrates**: Beans and possibly some vegetables or tomatoes contribute to the carbohydrate content.
+
+Considering these aspects, I'll reference some generic values for a similar prepared chili con carne.
+
+Typical values could be approximately:
+- Calories: 120-150 kcal per 100 grams
+- Protein: 6-8 grams per 100 grams
+- Fat: 5-7 grams per 100 grams
+- Carbohydrates: 10-15 grams per 100 grams
+</scratchpad>
+
+<calories>130</calories>
+<protein>7</protein>
+<fat>6</fat>
+<carbohydrates>12</carbohydrates>",130.0,7.0,6.0,12.0
+Pad Thaï Crevettes,,3456700231355,147.0,23.0,3.7,6.0,1.4,4.7,1.76,0.4,0.704,Composite Dishes,Pad Thai with shrips (ready meal),"<scratchpad>
+Pad Thai with shrimp is a traditional Thai dish that typically includes ingredients such as rice noodles, shrimp, eggs, tofu, bean sprouts, peanuts, and a variety of sauces (including tamarind sauce). Given that it is a ready meal, it is likely to have additional oil and possibly sugar. Therefore, it will be moderately high in calories, with a balance of protein from the shrimp and eggs, fat from the oil and peanuts, and carbohydrates from the rice noodles and sugar.
+</scratchpad>
+
+<calories>250</calories>
+<protein>12</protein>
+<fat>10</fat>
+<carbohydrates>30</carbohydrates>",250.0,12.0,10.0,30.0
+Paëlla à la Valenciana,Picard,3270160697861,140.0,15.0,5.1,7.6,1.6,1.5,0.71,1.2,0.284,Composite Dishes,Paella Valenciana (Picard),"<scratchpad>
+Paella Valenciana is a traditional Spanish rice dish that typically includes ingredients such as chicken, rabbit, green beans, white beans, tomato, olive oil, saffron, and sometimes snails. The commercial preparation by Picard may contain similar ingredients but could also have variations. The dish is known for being rich in flavor and balanced in macronutrients.
+
+Typical ingredients and their contributions:
+- Rice: Major source of carbohydrates.
+- Chicken/Rabbit: Source of protein and fat.
+- Olive oil: Source of fat.
+- Vegetables (green beans, white beans, tomato): Source of carbs, vitamins, and minor proteins.
+- Saffron and other spices: Minimal macronutrient contribution.
+
+Estimated breakdown per 100 grams:
+</scratchpad>
+
+<calories>150</calories>
+<protein>8</protein>
+<fat>5</fat>
+<carbohydrates>20</carbohydrates>",150.0,8.0,5.0,20.0
+Sheperds pie,Tesco Finest,5053947817724,126.0,12.6,4.85,7.24,1.2,2.01,0.463,2.2,0.185,Composite Dishes,Sheperds Pie (Tesco Finest),"<scratchpad>
+Shepherd's Pie is a traditional British dish typically made with a ground meat base (often lamb or beef) cooked with vegetables (such as onions, carrots, and peas) and topped with mashed potatoes. As this is a prepared meal from Tesco's ""Finest"" range, it likely uses quality ingredients and has a higher fat content due to richer ingredients used in premium lines.
+
+To estimate the nutritional content:
+- Calories: Since it’s a prepared meal with meat, mashed potatoes, and possibly some added fats for flavor, it could be around mid to high range.
+- Protein: Because it contains ground meat, this should be fairly high.
+- Fat: Likely includes oils/butter in the mashed potatoes and meat fat content, suggesting moderate to high fat.
+- Carbohydrates: Due to the mashed potato topping, it should have a significant carbohydrate content.
+
+Breaking down the elements:
+- Calories: Roughly 130-150 calories/100g, splitting the difference for a midpoint value.
+- Protein: For ground meat and a hearty food, around 5-6 grams/100g could be reasonable.
+- Fat: Given minced meat and possible use of butter or oil, it could be around 7 grams/100g.
+- Carbohydrates: Significant due to mashed potatoes, likely around 12-14 grams/100g.
+</scratchpad>
+
+<calories>140</calories>
+<protein>6</protein>
+<fat>7</fat>
+<carbohydrates>13</carbohydrates>",140.0,6.0,7.0,13.0
+Chicken casserole,Newgate,20995157,305.0,61.9,1.9,7.5,,9.0,12.1,0.6,4.84,Composite Dishes,Chicken Casserole (Newgate),"<scratchpad>
+Chicken Casserole is a dish that contains chicken, vegetables, possibly some form of broth or sauce, and seasoning. The nutritional content will depend on the exact ingredients and proportions used, but generally, casseroles are relatively balanced meals with contributions from protein (from chicken), fat (from cooking oils or butter), and carbohydrates (from vegetables or any starches used). 
+
+A typical chicken casserole would be expected to have a moderate amount of calories and protein, a moderate amount of fat (depending on how much oil or butter is used), and some carbohydrates (mainly from vegetables or starchy components like potatoes or noodles).
+</scratchpad>
+
+<calories>120</calories>
+<protein>10</protein>
+<fat>6</fat>
+<carbohydrates>8</carbohydrates>",120.0,10.0,6.0,8.0
+Old El Paso Cheesy Enchilada Kit,Old El Paso,8410076471222,182.0,31.8,2.89,5.66,3.25,5.54,1.13,0.361,0.451,Composite Dishes,Old El Paso Cheesy Enchilada Kit,"<scratchpad>
+Old El Paso Cheesy Enchilada Kit is a pre-packaged meal that typically includes tortillas, enchilada sauce, and a cheese blend. Considering the average content of these components, we can estimate the nutritional values. 
+
+A serving is likely a combination of tortilla (high in carbohydrates), enchilada sauce (moderate in carbohydrates and fats), and cheese (high in fats and protein).
+
+Estimated Caloric Content:
+- Tortilla: 5–10% fat, 70-80% carbohydrates, 10-15% protein; around 300-350 kcal/100g
+- Enchilada Sauce: 5-10% fat, 5-8% carbohydrates; around 60-100 kcal/100g
+- Cheese: 30% fat, 25% protein, 2-4% carbohydrates; around 300-400 kcal/100g
+
+Combining these, we'll average out the values based on typical usage, let's estimate around 190-220 kcal/100g for the total mix.
+
+Estimated Caloric Breakdown (per 100g):
+- Proteins: ~9-12g
+- Fats: ~8-10g
+- Carbohydrates: ~20-30g
+</scratchpad>
+
+<calories>205</calories>
+<protein>11</protein>
+<fat>9</fat>
+<carbohydrates>25</carbohydrates>",205.0,11.0,9.0,25.0
+Texas Gumbo with Sausage & Chicken,George & Rubie's Favorites,19966991,101.0,10.1,4.41,6.17,,0.441,0.76,1.1,0.304,Composite Dishes,Texas Gumbo with Sausage & Chicken (George & Rubie's Favorites),"<scratchpad>
+Texas Gumbo with Sausage & Chicken is a hearty, rich dish that typically contains ingredients such as sausage, chicken, vegetables (like bell peppers, onions, and celery), and spices. It also often includes a roux (a mixture of fat and flour) and may contain rice. The dish is likely to be high in calories due to the presence of sausage, roux, and possibly rice.
+
+1. **Calories**: Sausage and the roux are calorie-dense, as is possibly rice. Chicken, vegetables, and spices contribute fewer calories. Estimate about 150-200 calories per 100 grams.
+2. **Protein**: Chicken and sausage provide significant amounts of protein. Estimate around 10-15 grams of protein per 100 grams.
+3. **Fat**: Sausage and the roux contribute to the fat content, along with any oil or butter used. Estimate about 10-15 grams of fat per 100 grams.
+4. **Carbohydrates**: While vegetables add some carbs, the main carb sources would be the roux and rice. Estimate around 10-15 grams of carbohydrates per 100 grams.
+</scratchpad>
+
+<calories>180</calories>
+<protein>12</protein>
+<fat>12</fat>
+<carbohydrates>12</carbohydrates>",180.0,12.0,12.0,12.0
