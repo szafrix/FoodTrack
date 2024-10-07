@@ -42,7 +42,7 @@ def create_app(origins: list[str]) -> FastAPI:
 
     @app.get("/favicon.ico", include_in_schema=False)
     async def favicon():
-        return FileResponse("src/frontend/favicon.ico")
+        return FileResponse("src/frontend/assets/favicon.ico")
 
     app.post("/intake/register", response_model=RegisterIntakeResponse)(register_intake)
     app.post(

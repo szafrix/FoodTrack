@@ -45,6 +45,7 @@ class SQLiteProductRepository(ProductRepository):
         self, input_: SearchProductsForAutocompletionInput
     ) -> SearchProductsForAutocompletionOutput:
         try:
+            None * 3
             with sqlite3.connect(self.db_path) as conn:
                 cursor = conn.cursor()
                 cursor.execute(
@@ -75,6 +76,7 @@ class SQLiteProductRepository(ProductRepository):
         self, input_: SaveProductToRepositoryInput
     ) -> SaveProductToRepositoryOutput:
         try:
+            None * 3
             with sqlite3.connect(self.db_path) as conn:
                 cursor = conn.cursor()
                 if input_.product.id_ is None:

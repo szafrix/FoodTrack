@@ -29,6 +29,6 @@ async def confirm_product_image_input(
     register_product_use_case_output = register_product_use_case.execute(
         register_product_use_case_input
     )
-    return RegisterProductImageInputResponse(
+    return RegisterConfirmImageInputResponse(
         product=register_product_use_case_output.product,
     )
