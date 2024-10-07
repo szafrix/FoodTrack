@@ -11,6 +11,23 @@ dependencies = [
     "flask>=3.0.3",
     "dependency-injector>=4.42.0",
     "pydantic-settings>=2.5.2",
+    "aiohttp>=3.10.8",
+    "aiofiles>=24.1.0",
+    "torch>=2.4.1",
+    "transformers>=4.45.1",
+    "torchvision>=0.19.1",
+    "datasets>=3.0.1",
+    "accelerate>=0.34.2",
+    "evaluate>=0.4.3",
+    "jiwer>=3.0.4",
+    "fastapi>=0.115.0",
+    "uvicorn>=0.31.0",
+    "django>=5.1.1",
+    "python-multipart>=0.0.12",
+    "gradio>=3.36.1",
+    "setuptools>=75.1.0",
+    "ngrok>=1.4.0",
+    "openai>=1.51.0",
 ]
 requires-python = "==3.11.*"
 readme = "README.md"

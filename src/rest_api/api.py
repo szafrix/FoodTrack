@@ -1,118 +1,61 @@
-from typing import Self
-
-from flask import Flask, jsonify, request
-from pydantic import BaseModel, Field
-
-from src.core.interactors.register_product import (
-    RegisterProductInteractor,
-    RegisterProductInteractorInput,
-    RegisterProductInteractorOutput,
+from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+from fastapi.middleware.cors import CORSMiddleware
+from rest_api.endpoints.intake.register import (
+    register_intake,
+    RegisterIntakeResponse,
 )
-from dependency_injector.wiring import inject, Provide
-from di.container import Container
+from rest_api.endpoints.product.register_product_manual import (
+    register_product_manual_input,
+    RegisterProductManualInputResponse,
+)
+from rest_api.endpoints.product.register_product_image import (
+    register_product_image_input,
+    confirm_product_image_input,
+    RegisterProductImageInputResponse,
+)
+from rest_api.endpoints.autocomplete import (
+    autocomplete_product,
+    AutocompleteProductResponse,
+)
 
 
-class RegisterProductManualInputRequest(BaseModel):
-    name: str = Field(..., description="The name of the product")
-    kcal_100g: float = Field(..., description="The kcal value per 100g")
-    proteins_100g: float = Field(..., description="The proteins value per 100g")
-    carbs_100g: float = Field(..., description="The carbs value per 100g")
-    fats_100g: float = Field(..., description="The fats value per 100g")
+def create_app(origins: list[str]) -> FastAPI:
+    app = FastAPI()
 
+    app.add_middleware(
+        CORSMiddleware,
+        allow_origins=origins,
+        allow_credentials=True,
+        allow_methods=["GET", "POST"],
+        allow_headers=["*"],
+    )
 
-class RegisterProductManualInputResponse(BaseModel):
-    success: bool
-    error: str | None
+    app.mount("/static", StaticFiles(directory="src/frontend"), name="static")
 
+    @app.get("/")
+    async def read_index():
+        return FileResponse("src/frontend/index.html")
 
-class RegisterProductImageInputRequest(BaseModel):
-    name: str = Field(..., description="The name of the product")
-    nutrients_image: str = Field(..., description="The image of the product")
+    @app.get("/favicon.ico", include_in_schema=False)
+    async def favicon():
+        return FileResponse("src/frontend/favicon.ico")
 
-
-class RegisterProductImageInputResponse(BaseModel):
-    success: bool
-    error: str | None
-
-
-@inject
-def create_app(
-    register_product_interactor: RegisterProductInteractor = Provide(
-        Container.register_product_interactor
-    ),
-):
-    app = Flask(__name__)
-
-    @app.route("/register_product_manual_input/try_to_fetch", methods=["POST"])
-    def register_product_manual_input_try_to_fetch():
-        input_ = RegisterProductManualInputRequest(**request.json)
-        register_product_input = RegisterProductInteractorInput(
-            name=input_.name,
-            kcal_100g=input_.kcal_100g,
-            proteins_100g=input_.proteins_100g,
-            carbs_100g=input_.carbs_100g,
-            fats_100g=input_.fats_100g,
-            try_to_fetch_product=True,
-            nutrients_image=None,
-        )
-        register_product_output = register_product_interactor.execute(
-            register_product_input
-        )
-        return RegisterProductManualInputResponse(
-            success=register_product_output.success,
-            error=register_product_output.error,
-        ).model_dump()
-
-    @app.route("/register_product_image_input/try_to_fetch", methods=["POST"])
-    def register_product_image_input_try_to_fetch():
-        input_ = RegisterProductImageInputRequest(**request.json)
-        register_product_input = RegisterProductInteractorInput(
-            name=input_.name,
-            nutrients_image=input_.nutrients_image,
-            try_to_fetch_product=True,
-        )
-        register_product_output = register_product_interactor.execute(
-            register_product_input
-        )
-        return RegisterProductImageInputResponse(
-            success=register_product_output.success,
-            error=register_product_output.error,
-        ).model_dump()
-
-    @app.route("/register_product_manual_input/do_not_fetch", methods=["POST"])
-    def register_product_manual_input_do_not_fetch():
-
-        input_ = RegisterProductManualInputRequest(**request.json)
-        register_product_input = RegisterProductInteractorInput(
-            name=input_.name,
-            kcal_100g=input_.kcal_100g,
-            proteins_100g=input_.proteins_100g,
-            carbs_100g=input_.carbs_100g,
-            fats_100g=input_.fats_100g,
-            try_to_fetch_product=False,
-        )
-        register_product_output = register_product_interactor.execute(
-            register_product_input
-        )
-        return RegisterProductManualInputResponse(
-            success=register_product_output.success,
-            error=register_product_output.error,
-        ).model_dump()
-
-    @app.route("/register_product_image_input/do_not_fetch", methods=["POST"])
-    def register_product_image_input_do_not_fetch():
-        input_ = RegisterProductImageInputRequest(**request.json)
-        register_product_input = RegisterProductInteractorInput(
-            name=input_.name,
-            nutrients_image=input_.nutrients_image,
-            try_to_fetch_product=False,
-        )
-        register_product_output = register_product_interactor.execute(
-            register_product_input
-        )
-        return RegisterProductImageInputResponse(
-            success=register_product_output.success,
-            error=register_product_output.error,
-        ).model_dump()
-
+    app.post("/intake/register", response_model=RegisterIntakeResponse)(register_intake)
+    app.post(
+        "/product/register-manual-input",
+        response_model=RegisterProductManualInputResponse,
+    )(register_product_manual_input)
+    app.post(
+        "/product/register-image-input",
+        response_model=RegisterProductImageInputResponse,
+    )(register_product_image_input)
+    app.post(
+        "/product/register-confirm-image-input",
+        response_model=RegisterProductImageInputResponse,
+    )(confirm_product_image_input)
+    app.get("/autocomplete", response_model=AutocompleteProductResponse)(
+        autocomplete_product
+    )
     return app

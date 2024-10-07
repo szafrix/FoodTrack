@@ -1,23 +1,21 @@
-from abc import ABC, abstractmethod
 from pydantic import BaseModel
+from abc import ABC, abstractmethod
 
 
 class ImageRecognitionInput(BaseModel):
-    image: str
+    photo: str
 
 
 class ImageRecognitionOutput(BaseModel):
-    success: bool
-    kcal_100g: float | None
-    proteins_100g: float | None
-    carbs_100g: float | None
-    fats_100g: float | None
-    error: str | None
+    kcal_100g: float
+    proteins_100g: float
+    carbs_100g: float
+    fats_100g: float
 
 
 class ImageRecognitionService(ABC):
     @abstractmethod
-    def read_nutrients_from_image(
+    def read_nutriments_from_photo(
         self, input_: ImageRecognitionInput
     ) -> ImageRecognitionOutput:
         pass

@@ -1,65 +1,124 @@
 from dependency_injector import containers, providers
 from src.configs.app_config import (
-    AvailableImageRecognitionServices,
-    AvailableProductRepositories,
+    ImageRecognitionConfig,
+    IntakeRepositoryConfig,
+    ProductRepositoryConfig,
+    ImageRecognitionServices,
+    IntakeRepositories,
+    ProductRepositories,
 )
-from src.core.services.image_recognition import ImageRecognitionService
-from src.core.repositories.product_repository import ProductRepository
-from impl.services.dummy_image_recognition import DummyImageRecognitionService
-from src.impl.repositories.dummy_product_repository import DummyProductRepository
-from src.core.interactors.register_product import RegisterProductInteractor
+from src.core.repositories.product.repository import ProductRepository
+from src.core.repositories.intake.repository import IntakeRepository
+from src.core.services.image_recognition.service import ImageRecognitionService
+from src.core.use_cases.register_intake import RegisterIntakeUseCase
 from src.core.use_cases.register_product_in_repository import (
     RegisterProductInRepositoryUseCase,
 )
-from src.core.use_cases.fetch_product_from_repository import (
-    GetProductFromRepositoryUseCase,
+from src.core.use_cases.fetch_products_for_autocompletion import (
+    FetchProductsForAutocompletionUseCase,
+)
+from src.core.use_cases.read_nutriments_from_photo import (
+    ReadNutrimentsFromPhotoUseCase,
 )
 
 
-def create_image_recognition_service(
-    service: AvailableImageRecognitionServices,
+def get_product_repository(config: ProductRepositoryConfig) -> ProductRepository:
+    match config.name:
+        case ProductRepositories.DUMMY:
+            from src.impl.repositories.product.dummy.repository import (
+                DummyProductRepository,
+            )
+
+            return DummyProductRepository()
+        case ProductRepositories.SQLITE:
+            from src.impl.repositories.product.sqlite.repository import (
+                SQLiteProductRepository,
+            )
+            from src.impl.repositories.product.sqlite.config import (
+                SQLiteProductRepositoryConfig,
+            )
+
+            return SQLiteProductRepository(SQLiteProductRepositoryConfig())
+        case _:
+            raise ValueError(f"Invalid product repository name: {config.name}")
+
+
+def get_intake_repository(config: IntakeRepositoryConfig) -> IntakeRepository:
+    match config.name:
+        case IntakeRepositories.DUMMY:
+            from src.impl.repositories.intake.dummy.repository import (
+                DummyIntakeRepository,
+            )
+
+            return DummyIntakeRepository()
+        case IntakeRepositories.SQLITE:
+            from src.impl.repositories.intake.sqlite.repository import (
+                SQLiteIntakeRepository,
+            )
+            from src.impl.repositories.intake.sqlite.config import (
+                SQLiteIntakeRepositoryConfig,
+            )
+
+            return SQLiteIntakeRepository(SQLiteIntakeRepositoryConfig())
+        case _:
+            raise ValueError(f"Invalid intake repository name: {config.name}")
+
+
+def get_image_recognition_service(
+    config: ImageRecognitionConfig,
 ) -> ImageRecognitionService:
-    if service.value == AvailableImageRecognitionServices.DUMMY.value:
-        return DummyImageRecognitionService()
-    else:
-        raise ValueError(f"Invalid image recognition service: {service.value}")
+    match config.name:
+        case ImageRecognitionServices.DUMMY:
+            from src.impl.services.image_recognition.dummy.service import (
+                DummyImageRecognitionService,
+            )
 
+            return DummyImageRecognitionService()
+        case ImageRecognitionServices.OPENAI:
+            from src.impl.services.image_recognition.openai.service import (
+                OpenAIImageRecognitionService,
+            )
+            from src.impl.services.image_recognition.openai.config import (
+                OpenAIImageRecognitionServiceConfig,
+            )
 
-def create_product_repository_service(
-    service: AvailableProductRepositories,
-) -> ProductRepository:
-    if service.value == AvailableProductRepositories.DUMMY.value:
-        return DummyProductRepository()
-    else:
-        raise ValueError(f"Invalid product repository service: {service.value}")
+            return OpenAIImageRecognitionService(OpenAIImageRecognitionServiceConfig())
+        case _:
+            raise ValueError(f"Invalid image recognition service name: {config.name}")
 
 
 class Container(containers.DeclarativeContainer):
     config = providers.Configuration()
 
-    image_recognition_service = providers.Factory(
-        create_image_recognition_service,
-        service=config.image_recognition.service,
+    product_repository = providers.Singleton(
+        get_product_repository,
+        config=config.product_repository.as_(ProductRepositoryConfig),
+    )
+    intake_repository = providers.Singleton(
+        get_intake_repository,
+        config=config.intake_repository.as_(IntakeRepositoryConfig),
+    )
+    image_recognition_service = providers.Singleton(
+        get_image_recognition_service,
+        config=config.image_recognition.as_(ImageRecognitionConfig),
     )
 
-    product_repository_service = providers.Factory(
-        create_product_repository_service,
-        service=config.product_repository.service,
+    register_intake_use_case = providers.Factory(
+        RegisterIntakeUseCase,
+        intake_repository=intake_repository,
     )
 
-    register_product_use_case = providers.Factory(
+    register_product_in_repository_use_case = providers.Factory(
         RegisterProductInRepositoryUseCase,
-        product_repository=product_repository_service,
+        product_repository=product_repository,
     )
 
-    get_product_use_case = providers.Factory(
-        GetProductFromRepositoryUseCase,
-        product_repository=product_repository_service,
+    fetch_products_for_autocompletion_use_case = providers.Factory(
+        FetchProductsForAutocompletionUseCase,
+        product_repository=product_repository,
     )
 
-    register_product_interactor = providers.Factory(
-        RegisterProductInteractor,
-        register_product_use_case=register_product_use_case,
-        get_product_use_case=get_product_use_case,
+    read_nutriments_from_photo_use_case = providers.Factory(
+        ReadNutrimentsFromPhotoUseCase,
         image_recognition_service=image_recognition_service,
     )

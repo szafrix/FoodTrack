@@ -1,9 +1,13 @@
 from pydantic import BaseModel
 from src.core.entities.product import Product
-from src.core.repositories.product_repository import (
+from src.core.repositories.product.repository import (
     ProductRepository,
     SaveProductToRepositoryInput,
 )
+from src.core.exceptions import BaseError, UnexpectedError
+from logging import getLogger
+
+logger = getLogger(__name__)
 
 
 class RegisterProductInRepositoryUseCaseInput(BaseModel):
@@ -11,8 +15,7 @@ class RegisterProductInRepositoryUseCaseInput(BaseModel):
 
 
 class RegisterProductInRepositoryUseCaseOutput(BaseModel):
-    success: bool
-    error: str | None
+    product: Product
 
 
 class RegisterProductInRepositoryUseCase:
@@ -22,9 +25,24 @@ class RegisterProductInRepositoryUseCase:
     def execute(
         self, input_: RegisterProductInRepositoryUseCaseInput
     ) -> RegisterProductInRepositoryUseCaseOutput:
-        repository_input = SaveProductToRepositoryInput(product=input_.product)
-        repository_response = self.product_repository.save_product(repository_input)
-        return RegisterProductInRepositoryUseCaseOutput(
-            success=repository_response.success,
-            error=repository_response.error,
-        )
+        try:
+            save_product_input = SaveProductToRepositoryInput(product=input_.product)
+            repository_response = self.product_repository.save_product(
+                save_product_input
+            )
+            return RegisterProductInRepositoryUseCaseOutput(
+                product=repository_response.product,
+            )
+        except BaseError as exc:
+            logger.error(
+                f"Error while registering product in repository {exc}", exc_info=True
+            )
+            raise exc
+        except Exception as exc:
+            logger.error(
+                f"Unexpected error while registering product in repository {exc}",
+                exc_info=True,
+            )
+            raise UnexpectedError(
+                f"Unexpected error while registering product in repository"
+            ) from exc

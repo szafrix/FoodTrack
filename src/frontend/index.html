@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodTrack App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1,
+        h2 {
+            color: #333;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input,
+        button {
+            margin-top: 5px;
+        }
+
+        .autocompleteResults {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .autocompleteResults li {
+            cursor: pointer;
+            padding: 5px;
+            background-color: #f0f0f0;
+            margin-bottom: 2px;
+        }
+
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+        }
+
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+
+        .product-info {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+
+        .product-info h3 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>FoodTrack App</h1>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openTab(event, 'RegisterIntake')" id="defaultOpen">Register Intake</button>
+        <button class="tablinks" onclick="openTab(event, 'RegisterProductManual')">Register Product (Manual)</button>
+        <button class="tablinks" onclick="openTab(event, 'RegisterProductImage')">Register Product (Image)</button>
+    </div>
+
+    <div id="RegisterIntake" class="tabcontent">
+        <h2>Register Intake</h2>
+        <form id="intakeForm">
+            <label for="productName">Product Name:</label>
+            <input type="text" id="productName" class="productNameInput" required>
+            <div class="autocompleteResults"></div>
+            <label for="quantity">Quantity (g):</label>
+            <input type="number" id="quantity" required>
+            <label for="intakeDate">Date:</label>
+            <input type="datetime-local" id="intakeDate" required>
+            <button type="submit">Register Intake</button>
+        </form>
+    </div>
+
+    <div id="RegisterProductManual" class="tabcontent">
+        <h2>Register Product (Manual Input)</h2>
+        <form id="manualProductForm">
+            <label for="manualProductName">Product Name:</label>
+            <input type="text" id="manualProductName" class="productNameInput" required>
+            <div class="autocompleteResults"></div>
+            <label for="kcal">Calories (per 100g):</label>
+            <input type="number" id="kcal" step="0.01" required>
+            <label for="proteins">Proteins (per 100g):</label>
+            <input type="number" id="proteins" step="0.01" required>
+            <label for="carbs">Carbohydrates (per 100g):</label>
+            <input type="number" id="carbs" step="0.01" required>
+            <label for="fats">Fats (per 100g):</label>
+            <input type="number" id="fats" step="0.01" required>
+            <button type="submit">Register Product</button>
+        </form>
+        <div id="manualProductResult" style="display: none;">
+            <h3>Registered Product Information:</h3>
+            <div id="manualProductInfo"></div>
+        </div>
+    </div>
+
+    <div id="RegisterProductImage" class="tabcontent">
+        <h2>Register Product (Image Input)</h2>
+        <form id="imageProductForm">
+            <label for="imageProductName">Product Name:</label>
+            <input type="text" id="imageProductName" class="productNameInput" required>
+            <div class="autocompleteResults"></div>
+            <label for="productImage">Product Image:</label>
+            <input type="file" id="productImage" accept="image/*" required>
+            <button type="submit">Read Product from Image</button>
+        </form>
+        <div id="imageProductResult" style="display: none;">
+            <h3>Detected Product Information:</h3>
+            <div id="imageProductInfo"></div>
+            <button id="confirmImageProduct">Confirm and Save Product</button>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE_URL = window.location.origin;
+
+        // Helper function to make API calls
+        async function apiCall(endpoint, method, data) {
+            const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+                method: method,
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+            return response.json();
+        }
+
+        // Debounce function
+        function debounce(func, delay) {
+            let debounceTimer;
+            return function () {
+                const context = this;
+                const args = arguments;
+                clearTimeout(debounceTimer);
+                debounceTimer = setTimeout(() => func.apply(context, args), delay);
+            }
+        }
+
+        // Autocomplete functionality
+        function setupAutocomplete(inputElement, resultsElement) {
+            const debouncedAutocomplete = debounce(async (userInput) => {
+                if (userInput.length < 2) {
+                    resultsElement.innerHTML = '';
+                    return;
+                }
+
+                const response = await apiCall(`/autocomplete?user_input=${userInput}`, 'GET');
+
+                resultsElement.innerHTML = '';
+                response.products.forEach(product => {
+                    const li = document.createElement('li');
+                    li.textContent = product.name;
+                    li.addEventListener('click', () => {
+                        inputElement.value = product.name;
+                        inputElement.dataset.product = JSON.stringify(product);
+                        resultsElement.innerHTML = '';
+                    });
+                    resultsElement.appendChild(li);
+                });
+            }, 300);
+
+            inputElement.addEventListener('input', (e) => {
+                debouncedAutocomplete(e.target.value);
+            });
+        }
+
+        // Setup autocomplete for all product name inputs
+        document.querySelectorAll('.productNameInput').forEach(input => {
+            const resultsElement = input.nextElementSibling;
+            setupAutocomplete(input, resultsElement);
+        });
+
+        // Register Intake
+        document.getElementById('intakeForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const productInput = document.getElementById('productName');
+            const product = productInput.dataset.product ? JSON.parse(productInput.dataset.product) : {
+                name: productInput.value,
+                kcal_100g: 0,
+                proteins_100g: 0,
+                carbs_100g: 0,
+                fats_100g: 0
+            };
+            const data = {
+                product: product,
+                quantity: parseInt(document.getElementById('quantity').value),
+                date: new Date(document.getElementById('intakeDate').value).toISOString()
+            };
+            const response = await apiCall('/intake/register', 'POST', data);
+            alert(response.message);
+        });
+
+        // Register Product (Manual Input)
+        document.getElementById('manualProductForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const data = {
+                name: document.getElementById('manualProductName').value,
+                kcal_100g: parseFloat(document.getElementById('kcal').value),
+                proteins_100g: parseFloat(document.getElementById('proteins').value),
+                carbs_100g: parseFloat(document.getElementById('carbs').value),
+                fats_100g: parseFloat(document.getElementById('fats').value)
+            };
+            const response = await apiCall('/product/register-manual-input', 'POST', data);
+            displayProductInfo(response.product, 'manualProductInfo');
+            document.getElementById('manualProductResult').style.display = 'block';
+        });
+
+        // Register Product (Image Input)
+        document.getElementById('imageProductForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = new FormData();
+            formData.append('name', document.getElementById('imageProductName').value);
+            formData.append('image', document.getElementById('productImage').files[0]);
+
+            const response = await fetch(`${API_BASE_URL}/product/register-image-input`, {
+                method: 'POST',
+                body: formData
+            });
+            const result = await response.json();
+            displayProductInfo(result.product, 'imageProductInfo');
+            document.getElementById('imageProductResult').style.display = 'block';
+        });
+
+        document.getElementById('confirmImageProduct').addEventListener('click', async () => {
+            const productInfoDiv = document.getElementById('imageProductInfo');
+            const productInfo = productInfoDiv.dataset.product;
+            if (!productInfo) {
+                alert('No product information available to save.');
+                return;
+            }
+
+            const product = JSON.parse(productInfo);
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/product/register-confirm-image-input`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(product),
+                });
+
+                if (!response.ok) {
+                    throw new Error('Failed to save product');
+                }
+
+                const result = await response.json();
+                alert('Product saved successfully!');
+                document.getElementById('imageProductForm').reset();
+                document.getElementById('imageProductResult').style.display = 'none';
+                productInfoDiv.innerHTML = '';
+                productInfoDiv.removeAttribute('data-product');
+            } catch (error) {
+                console.error('Error saving product:', error);
+                alert('Failed to save product. Please try again.');
+            }
+        });
+
+        // Tab functionality
+        function openTab(evt, tabName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(tabName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Open the default tab
+        document.getElementById("defaultOpen").click();
+
+        function displayProductInfo(product, elementId) {
+            const productInfoDiv = document.getElementById(elementId);
+            productInfoDiv.innerHTML = `
+                <p><strong>Name:</strong> ${product.name}</p>
+                <p><strong>Calories (per 100g):</strong> ${product.kcal_100g}</p>
+                <p><strong>Proteins (per 100g):</strong> ${product.proteins_100g}g</p>
+                <p><strong>Carbohydrates (per 100g):</strong> ${product.carbs_100g}g</p>
+                <p><strong>Fats (per 100g):</strong> ${product.fats_100g}g</p>
+            `;
+            productInfoDiv.dataset.product = JSON.stringify(product);
+        }
+    </script>
+</body>
+
+</html>
