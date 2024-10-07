@@ -1,3 +1,4 @@
+from logging import getLogger
 from pydantic import BaseModel
 from src.core.entities.product import Product
 from datetime import datetime
@@ -37,7 +38,7 @@ class RegisterIntakeUseCase:
             )
             return save_intake_to_repository_output
         except BaseError as exc:
-            logger.error(f"Error while registering intake {exc}", exc_info=True)
+            logger.error(exc, exc_info=True)
             raise exc
         except Exception as exc:
             logger.error(

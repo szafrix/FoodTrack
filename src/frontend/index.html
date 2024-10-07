@@ -86,6 +86,67 @@
             margin-top: 0;
         }
     </style>
+    <div id="errorPopup" class="error-popup">
+        <div class="error-content">
+            <span class="close-btn">&times;</span>
+            <div id="errorMessage"></div>
+        </div>
+    </div>
+
+    <style>
+        .error-popup {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+        }
+
+        .error-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            max-width: 600px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .close-btn {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        #errorMessage {
+            margin-top: 10px;
+        }
+
+        #errorMessage pre {
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            background-color: #f8f8f8;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 4px;
+            font-size: 14px;
+            overflow-x: auto;
+        }
+    </style>
 </head>
 
 <body>
@@ -155,14 +216,23 @@
 
         // Helper function to make API calls
         async function apiCall(endpoint, method, data) {
-            const response = await fetch(`${API_BASE_URL}${endpoint}`, {
-                method: method,
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            });
-            return response.json();
+            try {
+                const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+                    method: method,
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
+                const result = await response.json();
+                if (!response.ok) {
+                    throw result; // Throw the entire result object
+                }
+                return result;
+            } catch (error) {
+                showErrorPopup(error.error, error.error_type, error.stack_trace);
+                throw error;
+            }
         }
 
         // Debounce function
@@ -325,6 +395,42 @@
             `;
             productInfoDiv.dataset.product = JSON.stringify(product);
         }
+    </script>
+    <script type="module">
+        import { handleApiError, hideErrorPopup } from '/static/js/errorHandler.js';
+
+        // Use handleApiError in all fetch calls
+        async function apiCall(endpoint, method, data) {
+            try {
+                const response = await fetch(`${API_BASE_URL}${endpoint}`, {
+                    method: method,
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
+                const result = await response.json();
+                if (!response.ok) {
+                    throw result;
+                }
+                return result;
+            } catch (error) {
+                handleApiError(error);
+                throw error;
+            }
+        }
+
+        // Close error popup when clicking outside or on close button
+        document.querySelector('.close-btn').addEventListener('click', hideErrorPopup);
+        window.addEventListener('click', function (event) {
+            const popup = document.getElementById('errorPopup');
+            if (event.target == popup) {
+                hideErrorPopup();
+            }
+        });
+
+        // Replace existing apiCall function with this new one
+        window.apiCall = apiCall;
     </script>
 </body>
 

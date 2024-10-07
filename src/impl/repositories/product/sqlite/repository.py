@@ -68,7 +68,7 @@ class SQLiteProductRepository(ProductRepository):
             return SearchProductsForAutocompletionOutput(products=products)
         except Exception as exc:
             raise SearchProductsForAutocompletionError(
-                f"Error searching products for autocompletion: {exc}"
+                f"Error searching products for autocompletion"
             ) from exc
 
     def save_product(
@@ -112,4 +112,4 @@ class SQLiteProductRepository(ProductRepository):
 
             return SaveProductToRepositoryOutput(product=input_.product)
         except Exception as exc:
-            raise SaveProductError(f"Error saving product: {exc}") from exc
+            raise SaveProductError(f"Error saving product") from exc

@@ -37,7 +37,7 @@ class FetchProductsForAutocompletionUseCase:
             return search_products_for_autocompletion_output
         except BaseError as exc:
             logger.error(
-                f"Error while fetching products for autocompletion {exc}",
+                exc,
                 exc_info=True,
             )
             raise exc
