@@ -35,7 +35,6 @@ class SqliteAnalyticsService(AnalyticsService):
                     GetIntakesByDateRepositoryInput(date=date)
                 )
                 intakes.extend(intakes_for_date.intakes)
-            logger.error(intakes)
             product_names_to_retrieve = [intake.product_name for intake in intakes]
             products = self.product_repository.get_products(
                 GetProductsRepositoryInput(product_names=product_names_to_retrieve)
@@ -57,7 +56,6 @@ class SqliteAnalyticsService(AnalyticsService):
             merged_df["fats"] = merged_df["quantity_g"] * merged_df["fats_100g"] / 100
             merged_df["date"] = merged_df["date"].dt.date
             merged_df = merged_df.groupby("date").sum().reset_index()
-            logger.error(merged_df)
             return DailySumOfIntakesAnalyticsServiceOutput(
                 dates=merged_df["date"].tolist(),
                 kcal_daily_intakes=merged_df["kcal"].tolist(),
