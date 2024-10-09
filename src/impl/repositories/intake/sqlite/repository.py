@@ -90,7 +90,6 @@ class SQLiteIntakeRepository(IntakeRepository):
                 )
                 for row in results
             ]
-            logger.error(intakes)
             return GetIntakesByDateRepositoryOutput(intakes=intakes)
         except Exception as exc:
             raise GetIntakesByDateError(f"Error getting intakes by date") from exc

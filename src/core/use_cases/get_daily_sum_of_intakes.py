@@ -35,7 +35,6 @@ class GetDailySumOfIntakesUseCase:
         self, input_: GetDailySumOfIntakesUseCaseInput
     ) -> GetDailySumOfIntakesUseCaseOutput:
         try:
-            logger.error(input_)
             analytics_input = DailySumOfIntakesAnalyticsServiceInput(dates=input_.dates)
             analytics_output = self.analytics_service.get_sum_of_daily_intakes(
                 analytics_input
