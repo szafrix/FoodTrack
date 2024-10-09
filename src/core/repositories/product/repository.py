@@ -4,6 +4,8 @@ from src.core.repositories.product.models import (
     SearchProductsForAutocompletionOutput,
     SaveProductToRepositoryInput,
     SaveProductToRepositoryOutput,
+    GetProductsRepositoryInput,
+    GetProductsRepositoryOutput,
 )
 
 
@@ -18,4 +20,10 @@ class ProductRepository(ABC):
     def save_product(
         self, input_: SaveProductToRepositoryInput
     ) -> SaveProductToRepositoryOutput:
+        pass
+
+    @abstractmethod
+    def get_products(
+        self, input_: GetProductsRepositoryInput
+    ) -> GetProductsRepositoryOutput:
         pass

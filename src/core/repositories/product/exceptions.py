@@ -11,3 +11,7 @@ class SearchProductsForAutocompletionError(ProductRepositoryError):
 
 class SaveProductError(ProductRepositoryError):
     pass
+
+
+class GetProductsError(ProductRepositoryError):
+    pass

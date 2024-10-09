@@ -7,3 +7,7 @@ class IntakeRepositoryError(BaseError):
 
 class SaveIntakeError(IntakeRepositoryError):
     pass
+
+
+class GetIntakesByDateError(IntakeRepositoryError):
+    pass

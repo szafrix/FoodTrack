@@ -3,6 +3,8 @@ from core.repositories.product.models import (
     SearchProductsForAutocompletionOutput,
     SaveProductToRepositoryInput,
     SaveProductToRepositoryOutput,
+    GetProductsRepositoryInput,
+    GetProductsRepositoryOutput,
 )
 
 from src.core.repositories.product.repository import ProductRepository
@@ -43,4 +45,28 @@ class DummyProductRepository(ProductRepository):
                 carbs_100g=10,
                 fats_100g=10,
             )
+        )
+
+    def get_products(
+        self, input_: GetProductsRepositoryInput
+    ) -> GetProductsRepositoryOutput:
+        return GetProductsRepositoryOutput(
+            products=[
+                Product(
+                    id=1,
+                    name="Product 1",
+                    kcal_100g=100,
+                    proteins_100g=10,
+                    carbs_100g=10,
+                    fats_100g=10,
+                ),
+                Product(
+                    id=2,
+                    name="Product 2",
+                    kcal_100g=200,
+                    proteins_100g=20,
+                    carbs_100g=20,
+                    fats_100g=20,
+                ),
+            ]
         )

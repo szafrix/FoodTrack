@@ -146,9 +146,6 @@
             font-size: 14px;
             overflow-x: auto;
         }
-    </style>
-    <style>
-        /* ... existing styles ... */
 
         .spinner {
             display: none;
@@ -171,6 +168,7 @@
             }
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -180,8 +178,8 @@
         <button class="tablinks" onclick="openTab(event, 'RegisterIntake')" id="defaultOpen">Register Intake</button>
         <button class="tablinks" onclick="openTab(event, 'RegisterProductManual')">Register Product (Manual)</button>
         <button class="tablinks" onclick="openTab(event, 'RegisterProductImage')">Register Product (Image)</button>
+        <button class="tablinks" onclick="openTab(event, 'Analytics')">Analytics</button>
     </div>
-
     <div id="RegisterIntake" class="tabcontent">
         <h2>Register Intake</h2>
         <form id="intakeForm">
@@ -236,6 +234,19 @@
         </div>
     </div>
 
+    <div id="Analytics" class="tabcontent">
+        <h2>Intake Analytics</h2>
+        <form id="analyticsForm">
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate" required>
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate" required>
+            <button type="submit">Get Analytics</button>
+        </form>
+        <div id="analyticsResult"></div>
+        <canvas id="caloriesChart"></canvas>
+        <canvas id="nutrientsChart"></canvas>
+    </div>
     <script>
         const API_BASE_URL = window.location.origin;
 
@@ -431,6 +442,89 @@
                 <p><strong>Fats (per 100g):</strong> ${product.fats_100g}g</p>
             `;
             productInfoDiv.dataset.product = JSON.stringify(product);
+        }
+        // Analytics
+        document.getElementById('analyticsForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const startDate = document.getElementById('startDate').value;
+            const endDate = document.getElementById('endDate').value;
+            const response = await apiCall(`/analytics/daily-sum-of-intakes?start_date=${startDate}&end_date=${endDate}`, 'GET');
+            displayAnalytics(response);
+        });
+
+        function displayAnalytics(data) {
+            const caloriesCtx = document.getElementById('caloriesChart').getContext('2d');
+            const nutrientsCtx = document.getElementById('nutrientsChart').getContext('2d');
+
+            new Chart(caloriesCtx, {
+                type: 'line',
+                data: {
+                    labels: data.dates,
+                    datasets: [
+                        {
+                            label: 'Calories (kcal)',
+                            data: data.calories,
+                            borderColor: 'rgb(255, 99, 132)',
+                            tension: 0.1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Daily Calorie Intake'
+                        }
+                    }
+                }
+            });
+
+            new Chart(nutrientsCtx, {
+                type: 'line',
+                data: {
+                    labels: data.dates,
+                    datasets: [
+                        {
+                            label: 'Proteins (g)',
+                            data: data.proteins,
+                            borderColor: 'rgb(54, 162, 235)',
+                            tension: 0.1
+                        },
+                        {
+                            label: 'Carbohydrates (g)',
+                            data: data.carbohydrates,
+                            borderColor: 'rgb(255, 206, 86)',
+                            tension: 0.1
+                        },
+                        {
+                            label: 'Fats (g)',
+                            data: data.fats,
+                            borderColor: 'rgb(75, 192, 192)',
+                            tension: 0.1
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    },
+                    plugins: {
+                        title: {
+                            display: true,
+                            text: 'Daily Nutrient Intake'
+                        }
+                    }
+                }
+            });
         }
     </script>
     <script type="module">
