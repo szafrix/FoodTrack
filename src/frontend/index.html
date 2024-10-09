@@ -146,6 +146,27 @@
             font-size: 14px;
             overflow-x: auto;
         }
+
+        .spinner {
+            display: none;
+            width: 50px;
+            height: 50px;
+            border: 3px solid rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            border-top: 3px solid #3498db;
+            animation: spin 1s linear infinite;
+            margin: 20px auto;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
@@ -205,6 +226,7 @@
             <input type="file" id="productImage" accept="image/*" required>
             <button type="submit">Read Product from Image</button>
         </form>
+        <div id="spinner" class="spinner"></div>
         <div id="imageProductResult" style="display: none;">
             <h3>Detected Product Information:</h3>
             <div id="imageProductInfo"></div>
@@ -336,13 +358,25 @@
             formData.append('name', document.getElementById('imageProductName').value);
             formData.append('image', document.getElementById('productImage').files[0]);
 
-            const response = await fetch(`${API_BASE_URL}/product/register-image-input`, {
-                method: 'POST',
-                body: formData
-            });
-            const result = await response.json();
-            displayProductInfo(result.product, 'imageProductInfo');
-            document.getElementById('imageProductResult').style.display = 'block';
+            // Show spinner
+            document.getElementById('spinner').style.display = 'block';
+            document.getElementById('imageProductResult').style.display = 'none';
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/product/register-image-input`, {
+                    method: 'POST',
+                    body: formData
+                });
+                const result = await response.json();
+                displayProductInfo(result.product, 'imageProductInfo');
+                document.getElementById('imageProductResult').style.display = 'block';
+            } catch (error) {
+                console.error('Error reading product from image:', error);
+                alert('Failed to read product from image. Please try again.');
+            } finally {
+                // Hide spinner
+                document.getElementById('spinner').style.display = 'none';
+            }
         });
 
         document.getElementById('confirmImageProduct').addEventListener('click', async () => {
