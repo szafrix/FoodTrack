@@ -1,15 +1,18 @@
 from logging import getLogger
+from src.core.entities.intake import Intake
 from src.core.repositories.intake.repository import IntakeRepository
 from src.core.repositories.intake.models import (
     SaveIntakeToRepositoryInput,
     SaveIntakeToRepositoryOutput,
+    GetIntakesByDateRepositoryInput,
+    GetIntakesByDateRepositoryOutput,
 )
 import sqlite3
-import os
 from src.impl.repositories.intake.sqlite.config import SQLiteIntakeRepositoryConfig
 from src.core.repositories.intake.exceptions import (
     IntakeRepositoryError,
     SaveIntakeError,
+    GetIntakesByDateError,
 )
 
 logger = getLogger(__name__)
@@ -66,3 +69,25 @@ class SQLiteIntakeRepository(IntakeRepository):
             )
         except Exception as exc:
             raise SaveIntakeError(f"Error saving intake") from exc
+
+    def get_intakes_by_date(
+        self, input_: GetIntakesByDateRepositoryInput
+    ) -> GetIntakesByDateRepositoryOutput:
+        try:
+            with sqlite3.connect(self.db_path) as conn:
+                cursor = conn.cursor()
+                cursor.execute("SELECT * FROM intakes WHERE date = ?", (input_.date,))
+                results = cursor.fetchall()
+
+            intakes = [
+                Intake(
+                    product_name=row[2],
+                    quantity_g=row[3],
+                    date=row[4],
+                )
+                for row in results
+            ]
+
+            return GetIntakesByDateRepositoryOutput(intakes=intakes)
+        except Exception as exc:
+            raise GetIntakesByDateError(f"Error getting intakes by date") from exc

@@ -28,6 +28,7 @@ dependencies = [
     "setuptools>=75.1.0",
     "ngrok>=1.4.0",
     "openai>=1.51.0",
+    "pandas>=2.2.3",
 ]
 requires-python = "==3.11.*"
 readme = "README.md"

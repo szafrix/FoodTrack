@@ -4,6 +4,8 @@ from src.core.repositories.product.models import (
     SearchProductsForAutocompletionOutput,
     SaveProductToRepositoryInput,
     SaveProductToRepositoryOutput,
+    GetProductsRepositoryInput,
+    GetProductsRepositoryOutput,
 )
 from src.core.entities.product import Product
 import sqlite3
@@ -13,6 +15,7 @@ from src.core.repositories.product.exceptions import (
     ProductRepositoryError,
     SearchProductsForAutocompletionError,
     SaveProductError,
+    GetProductsError,
 )
 
 
@@ -113,3 +116,30 @@ class SQLiteProductRepository(ProductRepository):
             return SaveProductToRepositoryOutput(product=input_.product)
         except Exception as exc:
             raise SaveProductError(f"Error saving product") from exc
+
+    def get_products(
+        self, input_: GetProductsRepositoryInput
+    ) -> GetProductsRepositoryOutput:
+        try:
+            with sqlite3.connect(self.db_path) as conn:
+                cursor = conn.cursor()
+                cursor.execute(
+                    "SELECT * FROM products WHERE id IN (?)", (input_.product_ids,)
+                )
+                results = cursor.fetchall()
+
+            products = [
+                Product(
+                    id_=row[0],
+                    name=row[1],
+                    kcal_100g=row[2],
+                    proteins_100g=row[3],
+                    carbs_100g=row[4],
+                    fats_100g=row[5],
+                )
+                for row in results
+            ]
+
+            return GetProductsRepositoryOutput(products=products)
+        except Exception as exc:
+            raise GetProductsError(f"Error getting products") from exc

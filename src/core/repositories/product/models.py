@@ -2,6 +2,14 @@ from pydantic import BaseModel
 from src.core.entities.product import Product
 
 
+class GetProductsRepositoryInput(BaseModel):
+    product_ids: list[int]
+
+
+class GetProductsRepositoryOutput(BaseModel):
+    products: list[Product]
+
+
 class SearchProductsForAutocompletionInput(BaseModel):
     query: str
 
