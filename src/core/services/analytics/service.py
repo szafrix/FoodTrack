@@ -5,11 +5,11 @@ from src.core.repositories.intake.repository import IntakeRepository
 from src.core.repositories.product.repository import ProductRepository
 
 
-class SumOfDailyIntakesAnalyticsServiceInput(BaseModel):
+class DailySumOfIntakesAnalyticsServiceInput(BaseModel):
     dates: list[datetime]
 
 
-class SumOfDailyIntakesAnalyticsServiceOutput(BaseModel):
+class DailySumOfIntakesAnalyticsServiceOutput(BaseModel):
     dates: list[datetime]
     kcal_daily_intakes: list[float]
     fats_daily_intakes: list[float]
@@ -26,6 +26,6 @@ class AnalyticsService(ABC):
 
     @abstractmethod
     def get_sum_of_daily_intakes(
-        self, input_: SumOfDailyIntakesAnalyticsServiceInput
-    ) -> SumOfDailyIntakesAnalyticsServiceOutput:
+        self, input_: DailySumOfIntakesAnalyticsServiceInput
+    ) -> DailySumOfIntakesAnalyticsServiceOutput:
         pass

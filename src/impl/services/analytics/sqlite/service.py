@@ -1,11 +1,11 @@
 import pandas as pd
 from src.core.services.analytics.service import (
     AnalyticsService,
-    SumOfDailyIntakesAnalyticsServiceInput,
-    SumOfDailyIntakesAnalyticsServiceOutput,
+    DailySumOfIntakesAnalyticsServiceInput,
+    DailySumOfIntakesAnalyticsServiceOutput,
 )
 from src.core.services.analytics.exceptions import (
-    SumOfDailyIntakesAnalyticsServiceError,
+    DailySumOfIntakesAnalyticsServiceError,
 )
 from src.core.repositories.intake.repository import IntakeRepository
 from src.core.repositories.product.repository import ProductRepository
@@ -26,24 +26,25 @@ class SqliteAnalyticsService(AnalyticsService):
         super().__init__(intake_repository, product_repository)
 
     def get_sum_of_daily_intakes(
-        self, input_: SumOfDailyIntakesAnalyticsServiceInput
-    ) -> SumOfDailyIntakesAnalyticsServiceOutput:
+        self, input_: DailySumOfIntakesAnalyticsServiceInput
+    ) -> DailySumOfIntakesAnalyticsServiceOutput:
         try:
             intakes = []
             for date in input_.dates:
-                intakes.extend(
-                    self.intake_repository.get_intakes_by_date(
-                        GetIntakesByDateRepositoryInput(date=date)
-                    )
+                intakes_for_date = self.intake_repository.get_intakes_by_date(
+                    GetIntakesByDateRepositoryInput(date=date)
                 )
-
-            product_ids_to_retrieve = [intake.product_id for intake in intakes]
+                intakes.extend(intakes_for_date.intakes)
+            logger.error(intakes)
+            product_names_to_retrieve = [intake.product_name for intake in intakes]
             products = self.product_repository.get_products(
-                GetProductsRepositoryInput(product_ids=product_ids_to_retrieve)
+                GetProductsRepositoryInput(product_names=product_names_to_retrieve)
             )
 
-            intakes_df = pd.DataFrame(intakes.model_dump())
-            products_df = pd.DataFrame(products.model_dump())
+            intakes_df = pd.DataFrame([intake.model_dump() for intake in intakes])
+            products_df = pd.DataFrame(
+                [product.model_dump() for product in products.products]
+            )
 
             merged_df = intakes_df.merge(
                 products_df, left_on="product_name", right_on="name"
@@ -54,9 +55,10 @@ class SqliteAnalyticsService(AnalyticsService):
             )
             merged_df["carbs"] = merged_df["quantity_g"] * merged_df["carbs_100g"] / 100
             merged_df["fats"] = merged_df["quantity_g"] * merged_df["fats_100g"] / 100
+            merged_df["date"] = merged_df["date"].dt.date
             merged_df = merged_df.groupby("date").sum().reset_index()
-
-            return SumOfDailyIntakesAnalyticsServiceOutput(
+            logger.error(merged_df)
+            return DailySumOfIntakesAnalyticsServiceOutput(
                 dates=merged_df["date"].tolist(),
                 kcal_daily_intakes=merged_df["kcal"].tolist(),
                 proteins_daily_intakes=merged_df["proteins"].tolist(),
@@ -64,6 +66,6 @@ class SqliteAnalyticsService(AnalyticsService):
                 fats_daily_intakes=merged_df["fats"].tolist(),
             )
         except Exception as exc:
-            raise SumOfDailyIntakesAnalyticsServiceError(
+            raise DailySumOfIntakesAnalyticsServiceError(
                 f"Error retrieving sum of daily intakes for analytics"
             ) from exc

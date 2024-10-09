@@ -19,6 +19,7 @@ def create_container(app_config: AppConfig):
             "src.rest_api.endpoints.product.register_product_manual",
             "src.rest_api.endpoints.intake.register",
             "src.rest_api.endpoints.autocomplete",
+            "src.rest_api.endpoints.analytics.daily_sum_of_intakes",
         ]
     )
     return container

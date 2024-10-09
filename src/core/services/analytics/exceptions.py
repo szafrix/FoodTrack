@@ -5,5 +5,5 @@ class AnalyticsError(BaseError):
     pass
 
 
-class SumOfDailyIntakesAnalyticsServiceError(AnalyticsError):
+class DailySumOfIntakesAnalyticsServiceError(AnalyticsError):
     pass

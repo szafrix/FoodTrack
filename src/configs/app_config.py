@@ -19,6 +19,11 @@ class ImageRecognitionServices(Enum):
     OPENAI = "openai"
 
 
+class AnalyticsServices(Enum):
+    DUMMY = "dummy"
+    SQLITE = "sqlite"
+
+
 class EnvConfig(BaseSettings):
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
@@ -33,6 +38,10 @@ class IntakeRepositoryConfig(EnvConfig):
 
 class ImageRecognitionConfig(EnvConfig):
     name: ImageRecognitionServices = Field(alias="IMAGE_RECOGNITION_SERVICE")
+
+
+class AnalyticsConfig(EnvConfig):
+    name: AnalyticsServices = Field(alias="ANALYTICS_SERVICE")
 
 
 class RestApiConfig(EnvConfig):
@@ -66,5 +75,6 @@ class AppConfig(EnvConfig):
     product_repository: ProductRepositoryConfig = ProductRepositoryConfig()
     intake_repository: IntakeRepositoryConfig = IntakeRepositoryConfig()
     image_recognition: ImageRecognitionConfig = ImageRecognitionConfig()
+    analytics: AnalyticsConfig = AnalyticsConfig()
     rest_api: RestApiConfig = RestApiConfig()
     ngrok: NgrokConfig = NgrokConfig()

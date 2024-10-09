@@ -5,15 +5,18 @@ from logging import getLogger
 from src.core.services.analytics.service import AnalyticsService
 from datetime import datetime
 from src.core.exceptions import BaseError, UnexpectedError
+from src.core.services.analytics.service import (
+    DailySumOfIntakesAnalyticsServiceInput,
+)
 
 logger = getLogger(__name__)
 
 
-class RetrieveSumOfDailyIntakesForAnalyticsUseCaseInput(BaseModel):
+class GetDailySumOfIntakesUseCaseInput(BaseModel):
     dates: list[datetime]
 
 
-class RetrieveSumOfDailyIntakesForAnalyticsUseCaseOutput(BaseModel):
+class GetDailySumOfIntakesUseCaseOutput(BaseModel):
     dates: list[datetime]
     kcal_daily_intakes: list[float]
     fats_daily_intakes: list[float]
@@ -21,7 +24,7 @@ class RetrieveSumOfDailyIntakesForAnalyticsUseCaseOutput(BaseModel):
     proteins_daily_intakes: list[float]
 
 
-class RetrieveSumOfDailyIntakesForAnalyticsUseCase:
+class GetDailySumOfIntakesUseCase:
     def __init__(
         self,
         analytics_service: AnalyticsService,
@@ -29,18 +32,21 @@ class RetrieveSumOfDailyIntakesForAnalyticsUseCase:
         self.analytics_service = analytics_service
 
     def execute(
-        self, input_: RetrieveSumOfDailyIntakesForAnalyticsUseCaseInput
-    ) -> RetrieveSumOfDailyIntakesForAnalyticsUseCaseOutput:
+        self, input_: GetDailySumOfIntakesUseCaseInput
+    ) -> GetDailySumOfIntakesUseCaseOutput:
         try:
-            sum_of_daily_intakes = self.analytics_service.get_sum_of_daily_intakes(
-                input_.dates
+            logger.error(input_)
+            analytics_input = DailySumOfIntakesAnalyticsServiceInput(dates=input_.dates)
+            analytics_output = self.analytics_service.get_sum_of_daily_intakes(
+                analytics_input
             )
-            return RetrieveSumOfDailyIntakesForAnalyticsUseCaseOutput(
-                dates=sum_of_daily_intakes.dates,
-                kcal_daily_intakes=sum_of_daily_intakes.kcal_daily_intakes,
-                fats_daily_intakes=sum_of_daily_intakes.fats_daily_intakes,
-                carbs_daily_intakes=sum_of_daily_intakes.carbs_daily_intakes,
-                proteins_daily_intakes=sum_of_daily_intakes.proteins_daily_intakes,
+
+            return GetDailySumOfIntakesUseCaseOutput(
+                dates=analytics_output.dates,
+                kcal_daily_intakes=analytics_output.kcal_daily_intakes,
+                fats_daily_intakes=analytics_output.fats_daily_intakes,
+                carbs_daily_intakes=analytics_output.carbs_daily_intakes,
+                proteins_daily_intakes=analytics_output.proteins_daily_intakes,
             )
         except BaseError as exc:
             logger.error(exc, exc_info=True)

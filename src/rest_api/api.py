@@ -19,6 +19,10 @@ from rest_api.endpoints.autocomplete import (
     autocomplete_product,
     AutocompleteProductResponse,
 )
+from rest_api.endpoints.analytics.daily_sum_of_intakes import (
+    get_daily_sum_of_intakes,
+    DailySumOfIntakesResponse,
+)
 from src.rest_api.middleware.error_handler import error_handler_middleware
 
 
@@ -60,4 +64,7 @@ def create_app(origins: list[str]) -> FastAPI:
     app.get("/autocomplete", response_model=AutocompleteProductResponse)(
         autocomplete_product
     )
+    app.get(
+        "/analytics/daily-sum-of-intakes", response_model=DailySumOfIntakesResponse
+    )(get_daily_sum_of_intakes)
     return app

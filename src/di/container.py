@@ -6,6 +6,8 @@ from src.configs.app_config import (
     ImageRecognitionServices,
     IntakeRepositories,
     ProductRepositories,
+    AnalyticsConfig,
+    AnalyticsServices,
 )
 from src.core.repositories.product.repository import ProductRepository
 from src.core.repositories.intake.repository import IntakeRepository
@@ -20,6 +22,10 @@ from src.core.use_cases.fetch_products_for_autocompletion import (
 from src.core.use_cases.read_nutriments_from_photo import (
     ReadNutrimentsFromPhotoUseCase,
 )
+from src.core.use_cases.get_daily_sum_of_intakes import (
+    GetDailySumOfIntakesUseCase,
+)
+from src.core.services.analytics.service import AnalyticsService
 
 
 def get_product_repository(config: ProductRepositoryConfig) -> ProductRepository:
@@ -87,6 +93,25 @@ def get_image_recognition_service(
             raise ValueError(f"Invalid image recognition service name: {config.name}")
 
 
+def get_analytics_service(config: AnalyticsConfig, intake_repository: IntakeRepository, product_repository: ProductRepository) -> AnalyticsService:
+    match config.name:
+        case AnalyticsServices.DUMMY:
+            from src.impl.services.analytics.dummy.service import (
+                DummyAnalyticsService,
+            )
+
+            return DummyAnalyticsService(intake_repository, product_repository)
+        case AnalyticsServices.SQLITE:
+            from src.impl.services.analytics.sqlite.service import (
+                SqliteAnalyticsService,
+            )
+
+            return SqliteAnalyticsService(intake_repository, product_repository)
+        case _:
+            raise ValueError(f"Invalid analytics service name: {config.name}")
+        
+
+
 class Container(containers.DeclarativeContainer):
     config = providers.Configuration()
 
@@ -101,6 +126,12 @@ class Container(containers.DeclarativeContainer):
     image_recognition_service = providers.Singleton(
         get_image_recognition_service,
         config=config.image_recognition.as_(ImageRecognitionConfig),
+    )
+    analytics_service = providers.Singleton(
+        get_analytics_service,
+        config=config.analytics.as_(AnalyticsConfig),
+        intake_repository=intake_repository,
+        product_repository=product_repository,
     )
 
     register_intake_use_case = providers.Factory(
@@ -121,4 +152,9 @@ class Container(containers.DeclarativeContainer):
     read_nutriments_from_photo_use_case = providers.Factory(
         ReadNutrimentsFromPhotoUseCase,
         image_recognition_service=image_recognition_service,
+    )
+
+    get_daily_sum_of_intakes_use_case = providers.Factory(
+        GetDailySumOfIntakesUseCase,
+        analytics_service=analytics_service,
     )

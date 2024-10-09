@@ -3,7 +3,7 @@ from src.core.entities.product import Product
 
 
 class GetProductsRepositoryInput(BaseModel):
-    product_ids: list[int]
+    product_names: list[str]
 
 
 class GetProductsRepositoryOutput(BaseModel):

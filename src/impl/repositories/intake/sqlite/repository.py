@@ -76,7 +76,10 @@ class SQLiteIntakeRepository(IntakeRepository):
         try:
             with sqlite3.connect(self.db_path) as conn:
                 cursor = conn.cursor()
-                cursor.execute("SELECT * FROM intakes WHERE date = ?", (input_.date,))
+                cursor.execute(
+                    "SELECT * FROM intakes WHERE DATE(date) = DATE(?)",
+                    (input_.date.isoformat(),),
+                )
                 results = cursor.fetchall()
 
             intakes = [
@@ -87,7 +90,7 @@ class SQLiteIntakeRepository(IntakeRepository):
                 )
                 for row in results
             ]
-
+            logger.error(intakes)
             return GetIntakesByDateRepositoryOutput(intakes=intakes)
         except Exception as exc:
             raise GetIntakesByDateError(f"Error getting intakes by date") from exc

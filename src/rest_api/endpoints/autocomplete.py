@@ -26,7 +26,6 @@ async def autocomplete_product(
     use_case_output = autocomplete_product_use_case.fetch_products_for_autocompletion(
         use_case_input
     )
-    print(use_case_output)
     return AutocompleteProductResponse(
         products=use_case_output.products,
     )

@@ -123,9 +123,9 @@ class SQLiteProductRepository(ProductRepository):
         try:
             with sqlite3.connect(self.db_path) as conn:
                 cursor = conn.cursor()
-                cursor.execute(
-                    "SELECT * FROM products WHERE id IN (?)", (input_.product_ids,)
-                )
+                placeholders = ",".join(["?" for _ in input_.product_names])
+                query = f"SELECT * FROM products WHERE name IN ({placeholders})"
+                cursor.execute(query, input_.product_names)
                 results = cursor.fetchall()
 
             products = [
