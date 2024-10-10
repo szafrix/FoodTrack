@@ -348,6 +348,7 @@
             };
             const response = await apiCall('/intake/register', 'POST', data);
             alert(response.message);
+            document.getElementById('intakeForm').reset();
         });
 
         // Register Product (Manual Input)
