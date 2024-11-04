@@ -6,29 +6,15 @@ authors = [
     {name = "szafrix", email = "bartosz.szafranski1@gmail.com"},
 ]
 dependencies = [
-    "requests>=2.32.3",
-    "streamlit>=1.38.0",
-    "flask>=3.0.3",
-    "dependency-injector>=4.42.0",
-    "pydantic-settings>=2.5.2",
-    "aiohttp>=3.10.8",
-    "aiofiles>=24.1.0",
-    "torch>=2.4.1",
-    "transformers>=4.45.1",
-    "torchvision>=0.19.1",
-    "datasets>=3.0.1",
-    "accelerate>=0.34.2",
-    "evaluate>=0.4.3",
-    "jiwer>=3.0.4",
-    "fastapi>=0.115.0",
-    "uvicorn>=0.31.0",
-    "django>=5.1.1",
-    "python-multipart>=0.0.12",
-    "gradio>=3.36.1",
-    "setuptools>=75.1.0",
-    "ngrok>=1.4.0",
-    "openai>=1.51.0",
-    "pandas>=2.2.3",
+    "requests==2.32.3",
+    "dependency-injector==4.42.0",
+    "pydantic-settings==2.5.2",
+    "fastapi==0.115.0",
+    "uvicorn==0.31.0",
+    "ngrok==1.4.0",
+    "openai==1.51.0",
+    "pandas==2.2.3",
+    "python-multipart==0.0.17",
 ]
 requires-python = "==3.11.*"
 readme = "README.md"
@@ -40,11 +26,10 @@ distribution = false
 
 [tool.pdm.dev-dependencies]
 dev = [
-    "ipykernel>=6.29.5",
-    "tqdm>=4.66.5",
-    "openai>=1.48.0",
-    "matplotlib>=3.9.2",
-    "seaborn>=0.13.2",
-    "scipy>=1.14.1",
+    "ipykernel==6.29.5",
+    "tqdm==4.66.5",
+    "matplotlib==3.9.2",
+    "seaborn==0.13.2",
+    "scipy==1.14.1",
 ]
 tqdm = []
